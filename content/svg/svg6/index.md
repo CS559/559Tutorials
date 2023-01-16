@@ -4,7 +4,7 @@ date: 2022-01-10T12:00:00-06:00
 draft: false
 weight: 10006
 summary: "SVG has good facilitities for drawing 2D curves. This is a good way to experiment with Bézier curves (since it supports them)."
-categories: ["Tutorials"]
+categories: ["svg"]
 tags: ["svg"]
 ---
 

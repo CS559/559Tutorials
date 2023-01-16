@@ -2,7 +2,7 @@
 title: "Image-based vs. Object-based Graphics"
 date: 2022-01-10T20:09:37-06:00
 draft: false
-categories: ["Tutorials"]
+categories: ["pictures"]
 tags: ["Graphics 101"]
 ---
 

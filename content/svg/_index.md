@@ -2,7 +2,7 @@
 title: "SVG Tutorials"
 date: 2022-01-10T11:32:08-06:00
 draft: false
-category: ["Tutorials"]
+categories: ["svg"]
 tags: ["svg"]
 ---
 

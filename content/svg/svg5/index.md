@@ -3,7 +3,7 @@ title: "SVG5: More Transforms and Composition"
 date: 2022-01-10T12:00:00-06:00
 draft: false
 weight: 10005
-categories: ["Tutorials"]
+categories: ["svg"]
 tags: ["svg"]
 ---
 

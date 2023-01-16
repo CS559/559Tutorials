@@ -3,7 +3,7 @@ title: "SVG4: Groups, Transforms, Re-Use, and Hierarchies"
 date: 2022-01-10T12:00:00-06:00
 draft: false
 weight: 10004
-categories: ["Tutorials"]
+categories: ["svg"]
 tags: ["svg"]
 ---
 

@@ -2,7 +2,7 @@
 title: "Color: Initial Answers to a Practical Question"
 date: 2022-01-10T20:00:11-06:00
 draft: false
-categories: ["Tutorials"]
+categories: ["color"]
 tags: ["Graphics 101"]
 ---
 

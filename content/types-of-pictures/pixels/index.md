@@ -2,7 +2,7 @@
 title: "What is a Pixel? (and what is a point sample?)"
 date: 2022-01-10T19:17:32-06:00
 draft: false
-categories: ["Tutorials"]
+categories: ["pictures"]
 tags: ["Graphics 101"]
 ---
 

@@ -3,8 +3,9 @@ title: "Traditional Object Oriented Programming in JavaScript (Part 2)"
 date: 2022-01-10T13:02:00-06:00
 draft: false
 tags: ["JavaScript"]
-categories: ["Tutorials"]
+categories: ["JavaScript"]
 toc: true
+weight: 12
 ---
 
 {{% dimbox %}}

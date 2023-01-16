@@ -2,7 +2,7 @@
 title: "Points, Vectors and Coordinate Systems"
 date: 2022-01-10T19:42:29-06:00
 draft: false
-categories: ["Tutorials"]
+categories: ["Math"]
 tags: ["Graphics 101"]
 ---
 

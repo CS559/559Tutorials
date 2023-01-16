@@ -4,7 +4,7 @@ date: 2022-01-10T12:00:00-06:00
 draft: false
 weight: 10001
 summary: "SVG is a file format for 2D vector (or object-oriented) graphics. (see the vector vs. image discussion). It is a web standard, and is now well supported by all major browsers."
-categories: ["tutorials"]
+categories: ["svg"]
 tags: ["svg"]
 ---
 

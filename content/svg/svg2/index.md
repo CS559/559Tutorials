@@ -4,7 +4,7 @@ date: 2022-01-10T12:00:00-06:00
 draft: false
 weight: 10002
 summary: "Now that you know that you’re going to have to use SVG, here’s a few things will be useful in actually making some pictures."
-categories: ["Tutorials"]
+categories: ["svg"]
 tags: ["svg"]
 ---
 
