@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="60" width="60">
+<!-- two squares (the same, except that one gets translated) -->
+<rect id="mysquare" x="10" y="10" height="20" width="20" />
+<use xlink:href="#mysquare" transform="translate(30,0)" />
+</svg>

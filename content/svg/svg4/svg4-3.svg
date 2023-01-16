@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" height="60" width="60">
+<g id="mygroup">
+<rect id="mysquare" x="10" y="10" height="20" width="20" />
+<use href="#mysquare" transform="translate(30,0)" />
+</g>
+<use href="#mygroup" transform="translate(0,30)" fill="red" />
+</svg>

@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" height="40px" width="100px">
+    <rect transform="translate(10,10)" x="0" y="0" height="20" width="20" style="fill:#a6cee3; stroke:#1f78b4"></rect>
+    <rect transform="translate(40,10)" x="0" y="0" height="20" width="20" fill="#b2df8a" stroke="#33a02c" />
+    <rect transform="translate(70,10)" x="0" y="0" height="20" width="20" fill="None" stroke="black" stroke-width="3" />
+</svg>

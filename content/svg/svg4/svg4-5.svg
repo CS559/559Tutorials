@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" height="70" width="300">
+<defs>
+<rect id="mysquare" x="-10" y="-10" height="20" width="20" transform="rotate(45)" />
+<g id="foursquare">
+    <use href="#mysquare" transform="translate( 0, 0)" />
+    <use href="#mysquare" transform="translate(30, 0)" />
+    <use href="#mysquare" transform="translate( 0,30)" />
+    <use href="#mysquare" transform="translate(30,30)" />
+</g>
+</defs>
+<g transform="translate(20,20)">
+    <use href="#foursquare" />
+    <g transform="translate(60,0)">
+        <use href="#foursquare" />
+        <g transform="translate(60,0)">
+            <use href="#foursquare" />
+            <g transform="translate(60,0)" stroke="red" stroke-width="3">
+                <use href="#foursquare" />
+            </g>
+        </g>
+    </g>
+</g>
+</svg>

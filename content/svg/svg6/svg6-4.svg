@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" height="50" width="100">
+    <rect x="0" y="0" height="50" width="100" fill="#EEE"/>
+    <path d="M20,25 L50,25 C60,0,70,50,80,25" fill="None" stroke="black" stroke-width="3" />
+</svg>

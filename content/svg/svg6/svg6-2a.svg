@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" height="70" width="120">
+    <rect x="0" y="0" height="70" width="120" fill="#EEE"/>
+    <path d="M 10,10 h 50 l -50,50 M 20,60 h 50 v -50 Z" fill="gray" stroke="black" stroke-width="3" />
+</svg>

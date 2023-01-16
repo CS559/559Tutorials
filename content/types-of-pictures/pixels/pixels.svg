@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" height="180" width="180">
+    <rect height="36" width="36" fill="#DDD" x="8" y="8"></rect>
+    <circle fill="#000" cx="26" cy="26" r="4"></circle>
+    <rect height="36" width="36" fill="#CDF" x="44" y="8"></rect>
+    <circle fill="#00F" cx="62" cy="26" r="4"></circle>
+    <rect height="36" width="36" fill="#FAA" x="80" y="8"></rect>
+    <circle fill="#F00" cx="98" cy="26" r="4"></circle>
+    <rect height="36" width="36" fill="#FFB" x="116" y="8"></rect>
+    <circle fill="#ED0" cx="134" cy="26" r="4"></circle>
+    <rect height="36" width="36" fill="#DFD" x="8" y="44"></rect>
+    <circle fill="#0F0" cx="26" cy="62" r="4"></circle>
+    <rect height="36" width="36" fill="#DDD" x="44" y="44"></rect>
+    <circle fill="#000" cx="62" cy="62" r="4"></circle>
+    <rect height="36" width="36" fill="#CDF" x="80" y="44">
+    </rect><circle fill="#00F" cx="98" cy="62" r="4"></circle>
+    <rect height="36" width="36" fill="#FAA" x="116" y="44"></rect><circle fill="#F00" cx="134" cy="62" r="4"></circle><rect height="36" width="36" fill="#FFB" x="8" y="80"></rect><circle fill="#ED0" cx="26" cy="98" r="4"></circle><rect height="36" width="36" fill="#DFD" x="44" y="80"></rect><circle fill="#0F0" cx="62" cy="98" r="4"></circle><rect height="36" width="36" fill="#DDD" x="80" y="80"></rect><circle fill="#000" cx="98" cy="98" r="4"></circle><rect height="36" width="36" fill="#CDF" x="116" y="80"></rect><circle fill="#00F" cx="134" cy="98" r="4"></circle><rect height="36" width="36" fill="#FAA" x="8" y="116"></rect><circle fill="#F00" cx="26" cy="134" r="4"></circle><rect height="36" width="36" fill="#FFB" x="44" y="116"></rect><circle fill="#ED0" cx="62" cy="134" r="4"></circle><rect height="36" width="36" fill="#DFD" x="80" y="116"></rect><circle fill="#0F0" cx="98" cy="134" r="4"></circle><rect height="36" width="36" fill="#DDD" x="116" y="116"></rect><circle fill="#000" cx="134" cy="134" r="4"></circle>
+</svg>

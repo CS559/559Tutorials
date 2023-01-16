@@ -1,0 +1,65 @@
+# this was coipied over from CS559-22 
+
+languageCode = "en-us"
+title = "CS559 Computer Graphics Tutorials"
+# note that we are skipping "sp22" theme - we'll try to put it right in the site
+theme = ["559Theme","mainroad"]
+
+# this seems to make things more robust to different deployments
+baseURL = ""
+relativeURLs = true
+canonifyURLs = true
+enableGitInfo = true
+
+# unsafe, but useful...
+enableInlineShortcodes = true
+
+# not sure why this doesn't work
+paginate = 15
+
+# this is just for testing...
+staticDir = [ "static" ]
+
+# a basic menu
+[[menu.main]]
+    identifier = "home"
+    name = "Home"
+    url = "/"
+    weight = -1000
+
+[Params]
+post_meta = ["section","date","taglist","categories"]
+mainSections = [""]
+dateformat = "January 2, 2006"
+copyright = "Michael Gleicher"
+subtitle = "Tutorial Resources for CS559"
+# archive = "Archive of the Spring 2023 Class"
+# archivenote = "This web page is from the Spring 2023 CS559 (Computer Graphics) class."
+ImportantPages = ["allpages"]
+paginate = 15
+themestyle = "new"
+recentSections = ["posts","assigns", "weeks-in-vis","gallery"]
+
+fixme = false
+
+[Params.sidebar]
+home = "right"
+list = "right"
+single = "right"
+# remove "thisweek" - since it is irrelevant for CS559
+widgets = ["section","lunr","important","links"]
+
+[outputs]
+home = [ "HTML", "RSS", "JSON" ]
+
+[markup.goldmark.renderer]
+unsafe= true
+
+[markup]
+  [markup.highlight]
+    codeFences = true
+    lineNos = true
+  [markup.tableOfContents]
+    endLevel = 3
+    ordered = false
+    startLevel = 2

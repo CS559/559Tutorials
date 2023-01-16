@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" height="60" width="160">
+    <rect x="0" y="0" height="60" width="160" fill="#EEE"/>
+    <def>
+        <path d="M0,0 v40 h40" id="ell" />
+    </def>
+    <use href="#ell" transform="translate(10,10)" />
+    <use href="#ell" transform="translate(60,10)" fill="None" stroke="black" />
+    <use href="#ell" transform="translate(110,10)" fill="grey" stroke="black" stroke-width="3px" />
+</svg>
