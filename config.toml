@@ -14,9 +14,6 @@ enableGitInfo = true
 # unsafe, but useful...
 enableInlineShortcodes = true
 
-# not sure why this doesn't work
-paginate = 15
-
 # this is just for testing...
 staticDir = [ "static" ]
 
@@ -36,7 +33,7 @@ subtitle = "Tutorial Resources for CS559"
 # archive = "Archive of the Spring 2023 Class"
 # archivenote = "This web page is from the Spring 2023 CS559 (Computer Graphics) class."
 ImportantPages = ["allpages"]
-paginate = 15
+pagination.pagerSize = 15
 themestyle = "new"
 recentSections = ["posts","assigns", "weeks-in-vis","gallery"]
 
