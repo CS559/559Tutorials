@@ -8,6 +8,8 @@ tags: ["Graphics 101"]
 
 When we talk about image-based graphics, we talk about it being a regular collection (usually a grid) of samples (or pixels). It’s time to be a little more precise about this.
 
+<!--more-->
+
 The term **pixel** is (I’m told) short for the term “picture element.” ([Wikipedia](http://en.wikipedia.org/wiki/Pixel), of course talks about this)
 
 Unfortunately, there is an ambiguity when we talk about a grid. And for reasons that we become clearer later, it is better to think about pixels one way rather than the other. Consider a grid:

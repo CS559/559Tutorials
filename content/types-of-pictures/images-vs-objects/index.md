@@ -7,6 +7,7 @@ tags: ["Graphics 101"]
 ---
 
 There’s a very basic distinction in kinds of pictures (and therefore kinds of graphics) we use with computers. The difference is really simple, but very difficult to describe precisely. In fact, we don’t even have great words for the two categories.
+<!--more-->
 
 In the old days, they referred to the two types as “raster” and “vector”. I prefer “image-based” and “object-based”.
 

@@ -8,6 +8,7 @@ tags: ["Graphics 101"]
 
 Color is complicated. There is a ton of stuff to learn. Later in class, we'll discuss color more – and just scratch the surface of its complexity. But, between now and then you need to make pictures and you will want to specify what colors are in them. So here’s a short version…
 
+<!--more-->
 ## Can I really represent Color as 3 Numbers?
 
 In terms of the physics of light: you cannot. In terms of the perceptual science (psychology): in theory, 3 numbers are sufficient to capture what people can see. In terms of computer graphics: 3 numbers are often good enough. But you need to understand the limits and issues in doing so. In terms of this class: we’ll use 3 numbers to represent colors. Except when we are specifically studying how color works.
