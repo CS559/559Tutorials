@@ -14,3 +14,5 @@ They are organized by topic:
 + SVG for CS559 - {{< link "svg" >}} - a basic introduction to SVG for when you need to use it
 + Types of Pictures in Graphics - {{< link "types-of-pictures" >}} - the foundations of graphics: what is a pixel anyway?
 
+{{<test>}}
+test?
