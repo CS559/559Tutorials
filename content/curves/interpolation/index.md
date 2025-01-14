@@ -9,7 +9,8 @@ This page provides an interactive demonstration of two types of interpolating cu
 
 <!--more-->
 
-To see this [Demo on a plane html page](/curve-demos/interpolation-demo.html) (useful for a lecture).
+<!-- WARNING: all links must be relative! -->
+To see this [Demo on a plane html page](../../curve-demos/interpolation-demo.html) (useful for a lecture).
 
 Suppose we have a set of points and we want to have a curve that passes through them. We'll start with 9 points.
 
@@ -21,4 +22,4 @@ Note: the diagrams are linked. You can move the control points in any one and th
 
 <canvas style="border: 1px solid black" id="canvas1" height="200" width="315"></canvas>
 <canvas style="border: 1px solid black" id="canvas2" height="200" width="315"></canvas>
-<script src="/curve-demos/interpolation-demo.js" type="module" defer>
+<script src="../../curve-demos/interpolation-demo.js" type="module" defer>
