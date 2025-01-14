@@ -5,8 +5,8 @@
 // @ts-check
 /* jshint -W069, esversion:6 */
 
-import { runCanvas } from "/559-Lib/runCanvas.js";
-import { draggablePoints } from "/559-Lib/dragPoints.js";
+import { runCanvas } from "../559-Lib/runCanvas.js";
+import { draggablePoints } from "../559-Lib/dragPoints.js";
 import { LagrangePolyCurve, CardinalCurve, GeneralPiecewiseCurve } from "./curve-definitions.js"
 import { clearCanvases, plotCurve } from "./curve-plotter.js"
 
