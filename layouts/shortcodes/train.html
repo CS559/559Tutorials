@@ -1,0 +1,5 @@
+{{ $trainjs := resources.Get "train-mg.js" | js.Build (dict "minify" true) }}
+<div id="train-div">
+    <canvas id = "canvas" height="600px" width="600px" style="border: 2px solid black"></canvas>
+</div>
+<script type="module" src="{{ $trainjs.RelPermalink }}"></script>

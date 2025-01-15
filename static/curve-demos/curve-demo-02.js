@@ -4,22 +4,22 @@
 // @ts-check
 /* jshint -W069, esversion:6 */
 
-import { runCanvas } from "../libs/CS559/runCanvas.js";
-import { draggablePoints } from "../libs/CS559/dragPoints.js";
+import { runCanvas } from "../559-Lib/runCanvas.js";
+import { draggablePoints } from "../559-Lib/dragPoints.js";
 import { LagrangePolyCurve, CardinalCurve, GeneralPiecewiseCurve } from "./curve-definitions.js"
 import { clearCanvases, plotCurve } from "./curve-plotter.js"
 
 /* no need for onload - we use defer */
 
-let canvas1 = document.getElementById("canvas1");
+let canvas1 = document.getElementById("canvas1b");
 if (!(canvas1 instanceof HTMLCanvasElement))
   throw new Error("Canvas is not HTML Element");
 
-let canvas2 = document.getElementById("canvas2");
+let canvas2 = document.getElementById("canvas2b");
 if (!(canvas2 instanceof HTMLCanvasElement))
   throw new Error("Canvas is not HTML Element");
 
-let canvas3 = document.getElementById("canvas3");
+let canvas3 = document.getElementById("canvas3b");
 if (!(canvas3 instanceof HTMLCanvasElement))
   throw new Error("Canvas is not HTML Element");
 
