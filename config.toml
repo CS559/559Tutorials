@@ -45,7 +45,7 @@ home = "right"
 list = "right"
 single = "right"
 # remove "thisweek" - since it is irrelevant for CS559
-widgets = ["section","lunr","important","links","categories"]
+widgets = ["section","lunr","important","links","categories","taglist"]
 
 [outputs]
 home = [ "HTML", "RSS", "JSON" ]
