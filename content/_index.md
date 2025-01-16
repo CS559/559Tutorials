@@ -8,6 +8,7 @@ This is a collection of tutorials written over the years for CS559, Computer Gra
 
 They are organized by topic:
 
++ General 559 information {{<link "general-info">}}
 + Tools and Setup for CS559 {{<link "tools-and-setup">}}
 + JavaScript for CS559 - {{<link "javascript">}} - hints for programming
 + Color for CS559 - {{<link "color">}} - will have information about color, now just same basic stuff
