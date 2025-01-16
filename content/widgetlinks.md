@@ -9,4 +9,6 @@ _build:
   list: never
 ---
 
-+ [Spring 2022 Course Web](https://pages.graphics.cs.wisc.edu/559-sp22/)
++ [Spring 2025 Honors](https://pages.graphics.cs.wisc.edu/559-sp25-honors/)
++ [Spring 2025 Regular Section](https://pages.graphics.cs.wisc.edu/559-sp25-honors/)
++ [Spring 2023 Course](https://pages.graphics.cs.wisc.edu/559-sp23/)
