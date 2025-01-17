@@ -2,8 +2,8 @@
 title: "Javascript in CS559"
 date: 2023-01-20T10:19:00-06:00
 draft: false
-categories: ["Basic Info"]
-tags: []
+categories: [javascript]
+tags: [javascript]
 toc: true
 weight: 1
 ---

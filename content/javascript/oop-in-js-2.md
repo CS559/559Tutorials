@@ -6,6 +6,7 @@ tags: ["JavaScript"]
 categories: ["JavaScript"]
 toc: true
 weight: 12
+summary: "This is part 2 of our 2 part tutorial on Traditional Object Oriented programming in JavaScript. We'll take a look at how we can use it to do the things you're used to in object oriented programming: inheritance, polymorphism, and more."
 ---
 
 {{% dimbox %}}

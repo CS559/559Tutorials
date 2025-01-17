@@ -3,18 +3,19 @@ title: "Git Setup and SSH configuration"
 date: 2021-01-20T12:20:35-06:00
 draft: false
 categories: ["tools"]
-tags: ["git"]
-weight: 0
+tags: ["git",tools]
+weight: 7
 toc: true
 ---
 
-In order to complete your assignments in CS559, you will need to install Git and configure it for SSH authentication with GitHub.
+In order to complete your assignments in CS559, you will need to use Git to send files back and forth to GitHub. We recommend that you install proper tools and use SSH authentication - it takes some time to set up, but it makes everything so much easier.
+
+<!--more-->
 
 This page contains our "canonical" instructions for setting up Git with SSH. While experienced Git users are welcome to use it however they prefer, following these instructions will make it much easier for us to help you if something goes wrong.
 
 See {{% link "git559" %}} for information on how to use Git and the role it plays in this class.
 
-<!--more-->
 
 ## First-time setup instructions
 

@@ -6,11 +6,12 @@ tags: ["JavaScript"]
 categories: ["JavaScript"]
 toc: true
 weight: 11
+summary: "A quick introduction to using traditional object oriented programming (classes, inheritence, etc.) in JavaScript."
 ---
 
 _This tutorial was written for CS559 2020 by the course staff, and updated for 2021 and 2022._
 
-Originally, JavaScript had some non-standard ways to do object-oriented programming. They were very cool, and very flexible - but they were non-standard and hard to learn
+Originally, JavaScript had some non-standard ways to do object-oriented programming. They were very cool, and very flexible - but they were non-standard and hard to learn.
 
 Fortunately, newer versions of JavaScript (like we use in class) give us another option that provides a convenient syntax for "traditional" (class/instance style) object oriented programming. JavaScript ES6 introduced classes to JavaScript, which use notation similar to what you may have seen in other object oriented languages. ES6 was from 2015, so its not like this is a new thing.
 
