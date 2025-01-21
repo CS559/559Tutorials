@@ -15,7 +15,7 @@ In terms of the physics of light: you cannot. In terms of the perceptual science
 
 ## Why R, G, and B?
 
-In graphics, we very often will represent a color as three numbers: the amount of red light, the amount of blue light, and the amount of green light. These three colors are the additive primaries: if you add lights of these colors together, you get lots of these colors. This is very different than the subtractive primaries (how different inks mix on paper to block out colors of light), or paint primaries (the colors of paints you mix together to make different colors).
+In graphics, we very often will represent a color as three numbers: the amount of red light, the amount of blue light, and the amount of green light. These three colors are the additive primaries: if you add lights of these colors together, you get mixtures that the human eye (or animal eyes) perceive as other colors. This is very different than the subtractive primaries (how different inks mix on paper to block out colors of light), or paint primaries (the colors of paints you mix together to make different colors).
 
 The reasons for RGB actually have to do with the anatomy of the human eye, and the practical issues of building devices that work given the constraints of how the eye works. If we were making computer graphics (and display devices) for ducks or monkeys, we would need to have different primaries.
 
