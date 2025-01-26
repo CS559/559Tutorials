@@ -54,7 +54,7 @@ console.log(addone(x));   // will return (the string) "71"
 
 These kinds of mistakes happen all the time in bigger programs. Maybe you didn't write "addone" and didn't know that it works best with a number. Maybe this is in a big body of code and you forgot that x is always supposed to be a number when you did the second assignment. Maybe you're using a complicated library and can't remember everything.
 
-The solution we will use in class is to try to document the types of things to make the intent clearer. We'll use comments in a standard form (called [JSDoc](http://usejsdoc.org/)). We'll use this standard because if we do, not only will human readers of our code know what to expect, but programs can read our code and check for mistakes. See [the TypeScript Supported JSDoc](https://www.typescriptlang.org/docs/handbook/type-checking-javascript-files.html#supported-jsdoc) page for information on how to format these comments.
+The solution we will use in class is to try to document the types of things to make the intent clearer. We'll use comments in a standard form (called [JSDoc](https://jsdoc.app/)). We'll use this standard because if we do, not only will human readers of our code know what to expect, but programs can read our code and check for mistakes. See [the TypeScript Supported JSDoc](https://www.typescriptlang.org/docs/handbook/type-checking-javascript-files.html#supported-jsdoc) page for information on how to format these comments.
 
 For example, if I do:
 
@@ -133,7 +133,7 @@ because the value of a slider is a string! (so easy to forget because it doesn't
 
 Sometimes we really use the dynamic nature of JavaScript types correctly. For example, we might have a function that can take a string or a number (either a name or an ID number). Or (in the case of the slider example above), the `getElementById` function returns a generic HTML object - not necessarily a slider. The dynamic typing will know exactly what type it is at runtime. As programmers, we know that the `slider` element is an input, so this is OK.
 
-In general, JSDoc gives a very flexible way to specify types (see the [documentation page](http://usejsdoc.org/tags-type.html)). When in doubt, you can always just say "\*" or "any" for the type. But this means you don't get the benefits of declaring the type.
+In general, JSDoc gives a very flexible way to specify types (see the [documentation page](https://jsdoc.app/tags-type)). When in doubt, you can always just say "\*" or "any" for the type. But this means you don't get the benefits of declaring the type.
 
 For the specific case, I can use a cast (which changes the type):
 
