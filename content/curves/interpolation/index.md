@@ -10,7 +10,7 @@ This page provides an interactive demonstration of two types of interpolating cu
 <!--more-->
 
 <!-- WARNING: all links must be relative! -->
-To see this [Demo on a plane html page](../../curve-demos/interpolation-demo.html) (useful for a lecture).
+To see this [Demo on a plain html page](../../curve-demos/interpolation-demo.html) (useful for a lecture).
 
 Suppose we have a set of points and we want to have a curve that passes through them. We'll start with 9 points.
 
