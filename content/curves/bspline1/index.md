@@ -28,3 +28,14 @@ Here is the same demo, with some more points.
 
 <canvas style="border: 1px solid black" id="canvas2" height="300" width="500"></canvas>
 
+Move the points around to see:
+
+1. The curve stays C(2)
+2. Control is local (each point influences up to 4 segments)
+3. The points influence the curve, but the curve doesn't necessarily go through them
+
+Try "doubling" the points (putting two consecutive points in the same place). Notice how this puts a "kink" in the curve (the 2nd derivative vanishes, so it acts like a C(2) discontinuity - it is like a C(1) curve there).
+
+If you triple the points, the curve will interpolate this spot (with 3 points on it). 
+
+This is particularly useful to make the curve interpolate its end points.

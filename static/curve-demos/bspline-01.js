@@ -78,7 +78,7 @@ function bspline(u,pts, start=0) {
     return [x,y,dx,dy];
 }
 
-const segcolors = ["blue","red","forestgreen","darkorange","darkcyan","goldenrod"]
+const segcolors = ["blue","red","forestgreen","darkorange","purple","magenta","goldenrod","darkcyan",]
 
 function bsplineDemo(canvasname, thePoints) {
     let canvas = document.getElementById(canvasname);
@@ -127,7 +127,9 @@ function bsplineDemo(canvasname, thePoints) {
             context.strokeStyle = segcolors[cid];
             for(let c=0; c<4; c++) {
                 context.beginPath();
-                context.arc(thePoints[c+seg][0],thePoints[c+seg][1],5+seg*3, 0, twoPi);
+                context.arc(thePoints[c+seg][0],
+                    // this used to be 5+seg*3, which makes the circles bigger
+                    thePoints[c+seg][1],5+c*4, 0, twoPi);
                 context.stroke();
             }
             context.restore();
