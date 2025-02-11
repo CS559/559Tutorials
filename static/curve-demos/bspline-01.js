@@ -1,11 +1,12 @@
 /**
- * written by Wiley Corning, February 2021
+ * started by Wiley Corning, February 2021
+ * updated by gleicher over the years...
  */
 // @ts-check
 /* jshint -W069, esversion:6 */
 
-import { runCanvas } from "../libs/CS559/runCanvas.js";
-import { draggablePoints } from "../libs/CS559/dragPoints.js";
+import { runCanvas } from "../559-Lib/runCanvas.js";
+import { draggablePoints } from "../559-Lib/dragPoints.js";
 import { LagrangePolyCurve, CardinalCurve, GeneralPiecewiseCurve } from "./curve-definitions.js"
 import { clearCanvases, plotCurve } from "./curve-plotter.js"
 
@@ -138,11 +139,18 @@ function bsplineDemo(canvasname, thePoints) {
     update();
 }
 
+bsplineDemo("canvas1", [ [100, 200], [100, 100], [200, 100], [200, 200] ]);
+
 let thePoints = [
-    [50, 150],
-    [50, 50],
-    [150, 50],
-    [150, 150],
 ];
 
-bsplineDemo("canvas1", [ [100, 200], [100, 100], [200, 100], [200, 200] ])
+const space = 160;
+
+for(let i=0; i<3; i++) {
+    thePoints.push([50+i*space, 200]);
+    thePoints.push([50+i*space, 100]);
+    thePoints.push([50+space/2+i*space, 100]);
+    thePoints.push([50+space/2+i*space, 200]);
+}
+
+bsplineDemo("canvas2", thePoints);
