@@ -1,7 +1,7 @@
 /*jshint esversion: 6 */
 // @ts-check
 
-import * as T from "../../libs/CS559-THREE/build/three.module.js";
+import * as T from "../../libs/CS559-Three/build/three.module.js";
 
 // get things we need
 // get things we need
