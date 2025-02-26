@@ -16,3 +16,6 @@ They are organized by topic:
 + SVG for CS559 - {{<link "svg">}} - a basic introduction to SVG for when you need to use it
 + Curves - {{<link "curves">}} - some demonstrations and explanations of various aspects of curves
 + Types of Pictures in Graphics - {{<link "types-of-pictures">}} - the foundations of graphics: what is a pixel anyway?
+
+Some 3D Oriented Demos and Tutorials
++ Textures - {{<link "textures">}} a collection of demos used in class

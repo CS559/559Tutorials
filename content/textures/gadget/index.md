@@ -1,7 +1,7 @@
 ---
 title: "Texture Gadget"
 date: 2025-02-26T12:29:17-06:00
-draft: true
+draft: false
 ---
 
 Here is a simple gadget to help you get the intuitions of texture coordinates.
