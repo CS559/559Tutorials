@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<!-- CS559 Workbook file
+      students are allowed (and encouraged) to read the HTML source files!
+
+      This is a minimal starter page 
+-->
+<header>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="../../libs/CS559/style559.css">
+<title>
+Simple Table
+</title>
+</header>
+<body>
+        <script src="t2-dyn-env.js" type="module"></script>
+
+        <p>Dynamic Environment Map Example</p>
+        <p>Some things to note (when you try this)...</p>
+        <ul>
+            <li>This uses a single environment map created from a camera at the center. If you look carefully, you'll notice that the moving cube doesn't appear in the right place in its reflection.</li>
+            <li>In theory, the mirrored cube and sphere should see each other. But, they both use the same texture map. If we try drawing these objects when creating the texture map, we get a "feedback loop" (the camera is taking a picture of a texture that is using the output of the camera). WebGL creates an error. To avoid all the error messages, I avoid drawing the shiny objects when doing the texture map drawing.</li>
+            <li>For some reason, even though I don't draw the environment mapped objects when I create the environment mapped object, I get a feedback error (one for each face). I have not been able to figure out why.</li>
+            <li>The skybox map map not be available when you first draw the scene (because of defered loading), so if you try to create a static environment map, you might get a blank sky. (not an issue in the demo, since the environment map is continually redrawn.</li>
+        </ul>
+</body>
+</html>
