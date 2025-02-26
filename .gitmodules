@@ -10,3 +10,12 @@
 [submodule "themes/roadster"]
 	path = themes/roadster
 	url = git@github.com:mansoorbarri/roadster.git
+[submodule "static/libs/CS559-Three"]
+	path = static/libs/CS559-Three
+	url = git@github.com:CS559/CS559-Three25.git
+[submodule "static/libs/CS559-Framework"]
+	path = static/libs/CS559-Framework
+	url = git@github.com:CS559/CS559-Framework25.git
+[submodule "static/libs/CS559"]
+	path = static/libs/CS559
+	url = git@github.com:CS559/CS559-Lib.git
