@@ -11,11 +11,13 @@ import {GrSphere, GrCube, GrCylinder} from "../../libs/CS559-Framework/SimpleObj
 
 // set a constant to pick which texture to use
 // this is the path to the set of 6 images, missing the "_Front.png" part
+// https://polyhaven.com/a/rooitou_park
 const envTextureBase = "../HDRIHeaven/rooituo";
 
 /**
  * Read in a set of textures from HDRI Heaven, as converted by 
  * https://www.360toolkit.co/convert-spherical-equirectangular-to-cubemap
+ * WARNING: that converter does not seem to exist any more (it is a problematic web site)
  * 
  * this uses a specific naming convention, and seems to (usually) swap bottom and front,
  * so I provide to undo this

@@ -29,3 +29,9 @@ This example has an environment map per object.
 <script src="dyn-env2.js" type="module"></script>
 
 Note how the moving sphere has a proper map taken from its position.
+
+### Acknowledgements
+
+The environment map comes from: [Poly Haven](https://polyhaven.com/a/rooitou_park) (actually, I got it from the predecessor to Poly Haven, which is now gone).
+
+I used a converter that no longer exists. 
