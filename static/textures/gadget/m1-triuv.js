@@ -13,7 +13,7 @@ import * as InputHelpers from "../../559-Lib/inputHelpers.js";
 const s2 = Math.sqrt(2)/2;
 
 // the texture we will use over and over
-let texture = new T.TextureLoader().load("../../textures/UV_Grid_Sm.jpg");
+let texture = new T.TextureLoader().load("./UV_Grid_Sm.jpg");
 texture.flipY = false;
 
 class TextureGadget extends GrObject {
