@@ -3,7 +3,8 @@
 languageCode = "en-us"
 title = "CS559 Computer Graphics Tutorials"
 # note that we are skipping "sp22" theme - we'll try to put it right in the site
-theme = ["559Theme","mainroad"]
+# we switched from mainroad to roadster in 2025
+theme = ["559Theme","roadster"]
 
 # this is archaic - and deprecated in Fall of 2024
 # this seems to make things more robust to different deployments
