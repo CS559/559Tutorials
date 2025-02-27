@@ -18,4 +18,5 @@ They are organized by topic:
 + Types of Pictures in Graphics - {{<link "types-of-pictures">}} - the foundations of graphics: what is a pixel anyway?
 
 Some 3D Oriented Demos and Tutorials
++ {{<link "3d">}} - 3D Basics (includes cameras)
 + Textures - {{<link "textures">}} a collection of demos used in class

@@ -1,10 +1,12 @@
 ---
-title: "Camera"
+title: "Camera Toy"
 date: 2025-02-27T09:08:07-06:00
 draft: false
 ---
 
 The old Camera Toy Demo - placed on a Hugo Page...
+
+Instructions and making it pretty are coming soon...
 
 <!--more-->
 
