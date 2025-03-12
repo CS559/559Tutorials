@@ -15,9 +15,14 @@ const s2 = Math.sqrt(2)/2;
 
 let cylcount = 0;
 
+// vector "registers"
+let _up = new T.Vector3(0,1,0);
+let _edge = new T.Vector3();
+
 /* make a cylinder where each face is a separate set of triangles
  * (all vertices split) so we can show different do face normals
  * and vertex normals
+ * splitting the vertices also allows for coloring
  */
 class MyCylinder extends GrObject {
     constructor(params={}, material) {
@@ -36,23 +41,47 @@ class MyCylinder extends GrObject {
         let stepTheta = Math.PI * 2 / sides;
         for(let thetaSteps = 0; thetaSteps < sides; thetaSteps++) {
             let theta = stepTheta * thetaSteps;
-            const xn = Math.cos(theta);
-            const x = xn*radius;
-            const zn = Math.sin(theta);
-            const z = zn*radius;
+            let xn = Math.cos(theta);
+            let x = xn*radius;
+            let zn = Math.sin(theta);
+            let z = zn*radius;
+            // make the next vertices on the face as well
+            let x2n = Math.cos(theta+stepTheta);
+            let x2 = x2n*radius;
+            let z2n = Math.sin(theta+stepTheta);
+            let z2 = z2n*radius;
+
+            // if we're making flat normals, we need to make flat normals...
+            if (params.flatNormals) {
+                _edge.set(x-x2,0,z-z2);
+                _edge.normalize();
+                _edge.cross(_up);
+                _edge.normalize();
+                xn = _edge.x;
+                zn = _edge.z;
+                x2n = xn;
+                z2n = zn;
+            }
+
             // bottom
             vertices.push(x,0,z);
             normals.push(xn,0,zn);
-            // 
+            // top
             vertices.push(x,height,z);
             normals.push(xn,0,zn);
+            // bottom
+            vertices.push(x2,0,z2);
+            normals.push(x2n,0,z2n);
+            // top
+            vertices.push(x2,height,z2);
+            normals.push(x2n,0,z2n);
+            
         }
-        // faces
+        // faces - since it's doubled...
         let indices = [];
         for(let i=0; i<sides; i++) {
-            const nextI = (i+1)%sides;
-            indices.push(2*i, 2*nextI, 2*i+1);
-            indices.push(2*i+1, 2*nextI, 2*nextI+1);
+            indices.push(4*i, 4*i+2, 4*i+1);
+            indices.push(4*i+2, 4*i+3, 4*i+1);
         }
 
         // now make a buffer geometry
