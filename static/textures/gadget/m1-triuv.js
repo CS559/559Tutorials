@@ -58,8 +58,7 @@ class TextureGadget extends GrObject {
         // the Triangle showing the texture
         this.triBG = new T.BufferGeometry();
         const triVerts = new T.BufferAttribute(new Float32Array([1.25,0,0,  2.25,0,0,  1.75,1,0 ]), 3);
-        const uvVerts = new T.BufferAttribute(
-            new Float32Array([this.v1.x, this.v1.y, this.v2.x, this.v2.y, this.v3.x, this.v3.y]),2);
+        const uvVerts = new T.BufferAttribute(new Float32Array([this.v1.x, this.v1.y, this.v2.x, this.v2.y, this.v3.x, this.v3.y]),2);
         this.triBG.setAttribute("position",triVerts);
         this.triBG.setAttribute("uv",uvVerts);
         this.triMesh = new T.Mesh(this.triBG,this.texMat);

@@ -4,6 +4,8 @@
 import * as T from "../../libs/CS559-Three/build/three.module.js";
 import { GrObject } from "../../libs/CS559-Framework/GrObject.js";
 import { GrWorld } from "../../libs/CS559-Framework/GrWorld.js";
+import * as AutoUI  from "../../libs/CS559-Framework/AutoUI.js";
+import { OrbitControls } from "../../libs/CS559-Three/examples/jsm/controls/OrbitControls.js";
 
 // Get HTML Elements
 
@@ -56,6 +58,14 @@ async function imagePixels(img, width, height) {
         throw Error("failed to load image because a 2D context could not be gotten")
     }
 
+    c.imageSmoothingQuality = "low";
+    c.imageSmoothingEnabled = false;
+
+    c.save()
+        c.fillStyle = "white";
+        c.fillRect(0, 0, cv.width, cv.height);
+    c.restore()
+
     c.drawImage(img, 0, 0, cv.width, cv.height);
 
     // get and return the pixel data written to the canvas
@@ -104,14 +114,15 @@ async function readFile(file) {
 }
 
 selector.value = "";
-selector.onchange = () => {
+let selectorOnChange = () => {
     const img_path = selector.value;
 
     if (img_path === "") { return }
 
     loadImage(img_path)
         .then(setGeoPic)
-}
+};
+selector.onchange = selectorOnChange;
 
 uploader.onchange = (event) => {
     const image = event.target.files[event.target.files.length - 1]
@@ -125,11 +136,18 @@ uploader.onchange = (event) => {
 export class GeoPic extends GrObject {
 
     constructor() {
-        super("geopic", []);
+
+        let group = new T.Group();
+        super("GeoPic", group, [
+            ["width"     , 10   , 600, 100, 10    ],
+            ["height"    , 10   , 600, 100, 10    ],
+            ["pixel_size", 0.01 , 1  , 0.1,  0.010],
+        ]);
 
         /** @type {T.Group} */
-        this.base = new T.Group();
+        this.base = group;
         this.base.position.set(0, 0, 0);
+        this.base.rotation.set(0, Math.PI, Math.PI/2);
         this.objects.push(this.base);
 
         /** @type {T.Group | null} */
@@ -144,6 +162,15 @@ export class GeoPic extends GrObject {
         this._height = 100;
         /** @type {number} The size of the "pixels". */
         this._psize = 0.1;
+    }
+
+    update(vals) {
+        this._width  = vals[0];
+        this._height = vals[1];
+        this._psize  = vals[2];
+        if (this._image) {
+            this.setImage(this._image);
+        }
     }
 
     /**
@@ -222,15 +249,10 @@ export class GeoPic extends GrObject {
      * @protected
      */
     setImageData(image) {
-        this.clear();
 
         const width  = image.width ;
         const height = image.height;
         const pixels = image.data  ;
-
-        const center = new T.Group();
-        center.position.set(0, 0, 0);
-
 
         // size (length, width, height) of each box
         const size = this._psize;
@@ -240,45 +262,216 @@ export class GeoPic extends GrObject {
         const cy = 0;
 
         // the top-left corner of the boxes
-        let tx = (cx - width *size / 2);
-        let ty = (cy + height*size / 2);
+        let tx = (cx - width *size/2);
+        let ty = (cy + height*size/2);
+
+        /** @type {number[]} */
+        const verts = [];
+        /** @type {number[]} */
+        const colors = [];
 
         for (let x = 0; x < width; x++) {
             for (let y = 0; y < height; y++) {
 
-                let i = (y*width + x) * 4;
+                {
+                    const l = tx + size*x;
+                    const r = l  + size  ;
+                    const t = ty - size*y;
+                    const b = t  - size  ;
 
-                const color = `rgb(${pixels[i]},${pixels[i+1]},${pixels[i+2]})`;
+                    verts.push(
+                        b,r,0, t,l,0, t,r,0, 
+                        b,r,0, b,l,0, t,l,0,
+                    );
+                }
 
-                const geometry = new T.BoxGeometry(size, size, size);
-                const material = new T.MeshBasicMaterial( { color: new T.Color(color), } ); 
-                const cube = new T.Mesh(geometry, material);
-                cube.position.x = tx + size*x;
-                cube.position.y = ty - size*y;
-                center.add(cube);
+                {
+                    const i = (y*width + x) * 4;
+                    const [r, g, b] = [pixels[i]/255, pixels[i+1]/255, pixels[i+2]/255];
+                    colors.push(r,g,b, r,g,b, r,g,b, r,g,b, r,g,b, r,g,b,);
+                }
             }
         }
 
+        // -- Create the Geometry/Material/Mesh --
+
+        const center = new T.Group();
+        center.position.set(0, 0, 0);
+
+        let geom = new T.BufferGeometry();
+        geom.setAttribute("position", new T.Float32BufferAttribute(new Float32Array(verts ), 3));
+        geom.setAttribute("color"   , new T.Float32BufferAttribute(new Float32Array(colors), 3));
+
+        const mat = new T.MeshBasicMaterial({ vertexColors: true, side: T.DoubleSide, });
+
+        const mesh = new T.Mesh(geom, mat);
+
+        center.add(mesh);
+
+        // -- Set the Mesh --
+
+        this.clear();
         this.imageGeo = center;
         this.base.add(center);
     }
 }
 
+export class TexPic extends GrObject {
+    constructor() {
+        const group = new T.Group();
+        group.position.set(0, 0, 0);
+
+        super("TexPic", group, [
+            ["width"     , 10   , 600, 100, 10   ],
+            ["height"    , 10   , 600, 100, 10   ],
+            ["pixel_size", 0.01 , 1  , 0.1, 0.010],
+        ]);
+
+        /** @type {T.Group} */
+        this._group = group;
+
+        /** @type {T.Group | null} */
+        this._geoGroup = null;
+
+        /** @type {HTMLImageElement | null} */
+        this._image = null;
+
+        /** @type {number} */
+        this._width = 100;
+
+        /** @type {number} */
+        this._height = 100;
+
+        /** @type {number} */
+        this._psize = 0.1;
+    }
+
+    update(vals) {
+        this._width  = vals[0];
+        this._height = vals[1];
+        this._psize  = vals[2];
+        if (this._image) {
+            this.setImage(this._image);
+        }
+    }
+
+    clear() {
+        if (this._geoGroup) {
+            this._group.remove(this._geoGroup);
+            this._geoGroup = null;
+            this._image = null;
+        }
+    }
+
+    /**
+     * @param {HTMLImageElement} img 
+     */
+    setImage(img) {
+
+        const cv = document.createElement("canvas");
+        document.body.appendChild(cv);
+
+        const width  = this._width ;
+        const height = this._height;
+
+        // The height and width of the image.
+        cv.width  = width ;
+        cv.height = height;
+
+        const c = cv.getContext("2d");
+        if (!c) {
+            document.body.removeChild(cv);
+            throw Error("failed to load image because a 2D context could not be gotten")
+        }
+
+        c.imageSmoothingQuality = "low";
+        c.imageSmoothingEnabled = false;
+
+        c.save()
+            c.fillStyle = "white";
+            c.fillRect(0, 0, cv.width, cv.height);
+        c.restore()
+        c.drawImage(img, 0, 0, cv.width, cv.height);
+
+        document.body.removeChild(cv);
+
+        const texture = new T.CanvasTexture(cv);
+
+        // the square showing the texture
+        const sqGeom = new T.BufferGeometry();
+        const pw = width *this._psize;
+        const ph = height*this._psize;
+        const sqXYZ = new Float32Array([
+            0,0,0,
+            pw,0,0,
+            0,ph,0,
+            pw,ph,0
+        ]);
+        const sqUV  = new Float32Array([0,0, 1,0, 0,1, 1,1]);
+        sqGeom.setAttribute("position", new T.BufferAttribute(sqXYZ,3) );
+        sqGeom.setAttribute("uv", new T.BufferAttribute(sqUV,2) );
+        sqGeom.setIndex([0,1,2,3,2,1]);
+        sqGeom.computeVertexNormals();
+        const texMat = new T.MeshBasicMaterial({ map: texture, side: T.DoubleSide, });
+        const mesh = new T.Mesh(sqGeom, texMat);
+
+        const geoGroup = new T.Group();
+        geoGroup.add(mesh);
+        geoGroup.position.set(-pw/2, -ph/2, 0);
+
+        this.clear();
+        this._image = img;
+        this._geoGroup = geoGroup;
+        this._group.add(geoGroup);
+    }
+}
+
 const geopic = new GeoPic();
+const texpic = new TexPic();
 
 /**
  * @param {HTMLImageElement} data 
  */
 function setGeoPic(data) {
     geopic.setImage(data);
+    texpic.setImage(data);
 }
 
+selector.value = "./snow_flakes.svg";
+selectorOnChange();
 
-let world = new GrWorld({
+// -- GeoPic --
+
+let geopic_world = new GrWorld({
     groundplane: false,
-    where: document.getElementById("canvas_div"),
+    where: document.getElementById("geopic_canvas"),
+    width : 300,
+    height: 300,
 });
 
-world.add(geopic);
+geopic_world.add(geopic);
+//geopic.setPos(-10, 0, 0)
+geopic_world.camera.position.set(0, 0, 14);
 
-world.go();
+geopic_world.go();
+
+// -- TexPic --
+
+let texpic_world = new GrWorld({
+    groundplane: false,
+    where: document.getElementById("texpic_canvas"),
+    width : 300,
+    height: 300,
+});
+
+texpic_world.camera.position.set(0, 0, 14);
+
+texpic_world.add(texpic);
+//texpic.setPos( 1, 0, 0)
+
+texpic_world.go();
+
+// -- UI --
+
+new AutoUI.AutoUI(texpic, 250, /** @type {any} */ (document.getElementById("div1")));
+new AutoUI.AutoUI(geopic, 250, /** @type {any} */ (document.getElementById("div2")));
