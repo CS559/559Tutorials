@@ -1,7 +1,7 @@
 ---
 title: "Pictures Made Of Triangles"
 date: 2025-03-12T00:23:09-05:00
-draft: true
+draft: false
 ---
 
 On the left is an image drawn using a texture.
@@ -9,6 +9,9 @@ On the left is an image drawn using a texture.
 On the right is the same image but drawn by coloring triangles.
 
 <!--more-->
+
+(more description coming soon)
+
 <div style="display: flex; flex-direction: row; gap: 10px;">
     <div id="texpic_canvas"></div>
     <div id="geopic_canvas"></div>
