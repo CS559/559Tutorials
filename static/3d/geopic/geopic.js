@@ -135,10 +135,11 @@ uploader.onchange = (event) => {
 
 export class GeoPic extends GrObject {
 
-    constructor() {
+    constructor(name = "") {
+        name = `GeoPic${name}`;
 
         let group = new T.Group();
-        super("GeoPic", group, [
+        super(name, group, [
             ["width"     , 10   , 600, 100, 10    ],
             ["height"    , 10   , 600, 100, 10    ],
             ["pixel_size", 0.01 , 1  , 0.1,  0.010],
@@ -317,11 +318,13 @@ export class GeoPic extends GrObject {
 }
 
 export class TexPic extends GrObject {
-    constructor() {
+    constructor(name = "") {
+        name = `TexPic${name}`;
+
         const group = new T.Group();
         group.position.set(0, 0, 0);
 
-        super("TexPic", group, [
+        super(name, group, [
             ["width"     , 10   , 600, 100, 10   ],
             ["height"    , 10   , 600, 100, 10   ],
             ["pixel_size", 0.01 , 1  , 0.1, 0.010],
@@ -426,18 +429,31 @@ export class TexPic extends GrObject {
     }
 }
 
-const geopic = new GeoPic();
-const texpic = new TexPic();
+const geoArray = [];
+const texArray = [];
+
+for (let x = -40; x <= 40; x += 10) {
+    for (let y = -40; y <= 40; y += 10) {
+        const geo = new GeoPic(`${x}-${y}`)
+        const tex = new TexPic(`${x}-${y}`)
+
+        geo.setPos(x, y, 0);
+        tex.setPos(x, y, 0);
+
+        geoArray.push(geo);
+        texArray.push(tex);
+    }
+}
 
 /**
  * @param {HTMLImageElement} data 
  */
 function setGeoPic(data) {
-    geopic.setImage(data);
-    texpic.setImage(data);
+    for (let geo of geoArray) { geo.setImage(data); }
+    for (let tex of texArray) { tex.setImage(data); }
 }
 
-selector.value = "./snow_flakes.svg";
+selector.value = "./checkerboard.png";
 selectorOnChange();
 
 // -- GeoPic --
@@ -449,7 +465,9 @@ let geopic_world = new GrWorld({
     height: 300,
 });
 
-geopic_world.add(geopic);
+for (const geo of geoArray) {
+    geopic_world.add(geo);
+}
 //geopic.setPos(-10, 0, 0)
 geopic_world.camera.position.set(0, 0, 14);
 
@@ -466,12 +484,14 @@ let texpic_world = new GrWorld({
 
 texpic_world.camera.position.set(0, 0, 14);
 
-texpic_world.add(texpic);
+for (const tex of texArray) {
+    texpic_world.add(tex);
+}
 //texpic.setPos( 1, 0, 0)
 
 texpic_world.go();
 
-// -- UI --
+// // -- UI --
 
-new AutoUI.AutoUI(texpic, 250, /** @type {any} */ (document.getElementById("div1")));
-new AutoUI.AutoUI(geopic, 250, /** @type {any} */ (document.getElementById("div2")));
+// new AutoUI.AutoUI(texArray[40], 250, /** @type {any} */ (document.getElementById("div1")));
+// new AutoUI.AutoUI(geoArray[40], 250, /** @type {any} */ (document.getElementById("div2")));

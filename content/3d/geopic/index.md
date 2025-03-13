@@ -19,6 +19,7 @@ On the right is the same image but drawn by coloring triangles.
 <label>Select An Image:</label>
 <select id="image_selector">
     <option value="">-- Select An Image --</option>
+    <option value="./dots.jpg">Dots</option>
     <option value="./checkerboard.png">Checkerboard</option>
     <option value="./snow_flakes.svg">Snowflakes</option>
     <option value="./moving_scales.svg">Circles</option>
