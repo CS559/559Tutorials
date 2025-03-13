@@ -9,7 +9,6 @@ import { GrWorld }  from "../../libs/CS559-Framework/GrWorld.js";
 import { GrObject } from "../../libs/CS559-Framework/GrObject.js";
 import * as AutoUI  from "../../libs/CS559-Framework/AutoUI.js";
 import * as InputHelpers from "../../libs/CS559/inputHelpers.js";
-import * as Geom from "./Geometry.js";
 
 const s2 = Math.sqrt(2)/2;
 
