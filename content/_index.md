@@ -20,3 +20,4 @@ They are organized by topic:
 Some 3D Oriented Demos and Tutorials
 + {{<link "3d">}} - 3D Basics (includes cameras)
 + Textures - {{<link "textures">}} a collection of demos used in class
++ Shaders - {{<link "shaders">}} some examples of writing shaders (including the simple {{<link wood>}})
