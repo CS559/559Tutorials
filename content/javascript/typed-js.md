@@ -5,7 +5,6 @@ draft: false
 categories: ["JavaScript"]
 tags: ["JavaScript","vscode"]
 weight: 5
-tags: [javascript]
 ---
 
 JavaScript does not *require* you to declare the types of your variables, function arguments, objects, object properties, or much of anything. However, if you give it some hints as to what you expect (as comments in your code), you can help a reader understand your program, and software tools find mistakes.
