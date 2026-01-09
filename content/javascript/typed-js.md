@@ -7,7 +7,7 @@ tags: ["JavaScript","vscode"]
 weight: 5
 ---
 
-JavaScript does not *require* you to declare the types of your variables, function arguments, objects, object properties, or much of anything. However, if you give it some hints as to what you expect (as comments in your code), you can help a reader understand your program, and software tools find mistakes.
+JavaScript does not *require* you to declare the types of your variables, function arguments, objects, object properties, or much of anything. However, giving some hints as to what you expect (as comments in your code) can help readers understand your program and software tools find your mistakes.
 
 This page describes some programming practices that are *recommended* for CS559.
 
@@ -75,7 +75,7 @@ To check for these errors in Visual Studio Code, put the magic line:
 
 at the *beginning* of your program (I believe this special comment must occur before any executable statements). This tells VSCode to use the "TypeScript type checker" (explained later) on your program. For me, I see a red underline under the x in the `x="7"` line in the code above, and if I look at the "problems" list, it says `Type "7" is not assignable to type 'number'`.
 
-To learn about type checking in Visual Code see [the documentation](https://github.com/Microsoft/TypeScript/wiki/Type-Checking-JavaScript-Files). To learn about how to write the JSDoc comments see [Supported JSDoc](https://www.typescriptlang.org/docs/handbook/type-checking-javascript-files.html#supported-jsdoc).
+To learn about type checking in Visual Code see [the documentation](https://www.typescriptlang.org/docs/handbook/type-checking-javascript-files.html). To learn about how to write the JSDoc comments see [Supported JSDoc](https://www.typescriptlang.org/docs/handbook/type-checking-javascript-files.html#supported-jsdoc).
 
 ## Some advantages of explicit typing
 
@@ -187,4 +187,4 @@ If you're a TypeScript programmer, sorry. You have to do it this way for class. 
 
 I am not aware of any other editor that does TypeScript type checking on JavaScript code.
 
-You can use the TypeScript compiler as a checker for JavaScript code. See [this page](https://github.com/Microsoft/TypeScript/wiki/Type-Checking-JavaScript-Files). Remember, you cannot program in TypeScript for class (see the class policy).
+You can use the TypeScript compiler as a checker for JavaScript code. See [this page](https://www.typescriptlang.org/docs/handbook/type-checking-javascript-files.html). Remember, you cannot program in TypeScript for class (see the class policy).
