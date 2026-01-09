@@ -11,8 +11,6 @@ summary: 'An overview of recommended tools for doing the programming assignments
 
 **Preface:** For programming in this class, you will want to have good tools. Good tools make programming easier, and let you focus on the (more fun and interesting) content. You will also need to have tools to work with GIT for source control as this will be our mechanism for handing in assignments.
 
-(updated for 2025)
-
 ## Overview of Programming Tools for CS559
 
 In CS559, you will do a substantial amount of JavaScript programming. See the {{% link "javascript559" %}} page for a discussion. We will use GitHub to distribute framework code and for students to hand in assignments (see the {{% link "git559" %}} page).
@@ -36,7 +34,7 @@ The optional (but recommended) things (details below):
 
 You may use any tools that works for you. Since we assume that you are using your own computer(s), it is your responsibility to set these things up and learn to use them. **We strongly recommend you get things set up the first week in class.** Spend time early in the semester to master the tools!
 
-We recommend (and can provide some help with, details below and in the links):
+We strongly recommend (and can provide some help with, details below and in the links):
 
 1. Chrome
 2. Installing the command line GIT tools, and optionally a visual client  (SourceTree)

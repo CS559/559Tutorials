@@ -12,8 +12,6 @@ We recommend using Visual Studio Code (VSCode) for doing the programming assignm
 
 <!--more-->
 
-(updated for 2025)
-
 You will need to use some IDE or text editor for editing JavaScript programs and web pages (e.g., html and css files).
 
 It is worth investing your time in learning to use good tools (like VSCode).

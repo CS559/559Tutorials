@@ -105,7 +105,7 @@ The exact steps you use will depend on what system you are on, and what version 
 
     Go to your GitHub account settings (look in the upper right drop down menu, pick settings, then pick SSH and GPG keys on the left - the link https://github.com/settings/keys should work if you are logged in). 
 
-    Press "New SSH key" - there will be a big box that says "key" - put the text that you copied in there. Give it a meaningful title, like "SSH key generated on January 25".
+    Press "New SSH key" - there will be a big box that says "key" - put the text that you copied in there. Give it a meaningful title, like "SSH key generated for CS 559".
 
     Press "Add SSH key"
 

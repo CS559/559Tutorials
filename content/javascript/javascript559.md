@@ -156,11 +156,12 @@ There are lots of JavaScript tutorials on the web. There are lots of books (some
 
 * **Eloquent Javascipt,** by Marijin Haverbeke. A book available online [(EloquentJS-Web)](https://eloquentjavascript.net/). You can buy a physical copy from Amazon [(EloquentJS-Amazon)](https://amzn.to/2QgkYhg). I like this book because it introduces JavaScript as a modern, functional programming language, and fits my philosophy on how to teach JavaScript. It's also up to date with ES6.
 
-* **JavaScript for Impatient Programmers,** by Axel Rauschmayer. A book (mostly) available for free online [(JS for impatient)](https://exploringjs.com/impatient-js/index.html). What you need is available as [(html)](https://exploringjs.com/impatient-js/toc.html) or [(pdf)](https://exploringjs.com/impatient-js/downloads/impatient-js-preview-book.pdf). I like this because (1) his previous books were good (arguably better), (2) it is up to date with the recent language developments, (3) its discussion of the advanced topics connect them to the different ways we did things in the past.
+* **Exploring JavaScript,** by Axel Rauschmayer. A book (mostly) available for free online [(Exploring JavaScript)](https://exploringjs.com/impatient-js/index.html). What you need is available as [(html)](https://exploringjs.com/impatient-js/toc.html) or [(pdf)](https://exploringjs.com/js/downloads/exploring-js-book-preview.pdf). I like this because (1) his previous books were good (arguably better), (2) it is up to date with the recent language developments, (3) its discussion of the advanced topics connect them to the different ways we did things in the past.
 
     I still like his older book [Speaking JavaScript](https://exploringjs.com/es5/). But, this book is about the older version of JavaScript (ES5), and spends time talking about dealing with ES5 shortcomings. I like it because it starts with a concise "[crash course](https://exploringjs.com/es5/ch01.html)", and then goes on to more detail. The [crash course](https://exploringjs.com/es5/ch01.html) might be the best way to get started (but we don't need to use IIFE anymore since we have "let" in ES6).
 
-{{<expand "2025 Lectures - just for history's sake">}}
+<!--
+{{<expand "2015 Lectures - just for history's sake">}}
 In 2015, I gave a series of Lectures on JavaScript programming. These are pretty out of date.
 
 * [Lecture 2 (really the 1st lecture) - language basics, closures](https://mediaspace.wisc.edu/media/CS638+JavaScript+Fall+15+-+Lecture+2+-+Language+Basics/1_watic24o)
@@ -169,5 +170,6 @@ In 2015, I gave a series of Lectures on JavaScript programming. These are pretty
 
 * [Lecture 4 Functions](https://mediaspace.wisc.edu/media/CS638+JavaScript+Fal+15+-+Lecture+4+-+More+with+Functions/0_foxwvqzf) - this is a mix of old-style JavaScript weirdness, and a discussion of closures. If you're not familiar with closures, they are important, useful, and take a little time to figure out.
 {{</expand>}}
+-->
 
 Programming is not a spectator sport: you can't learn it by just reading about it or watching someone do it. You need to actually write some programs. You will get to do plenty of programming in class. You might want to try doing some JavaScript programming outside of class to get ready.
