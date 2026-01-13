@@ -39,8 +39,8 @@ We strongly recommend (and can provide some help with, details below and in the 
 1. Chrome
 2. Installing the command line GIT tools, and optionally a visual client  (SourceTree)
 3. Visual Studio Code (VSCode) as an IDE
-4. LiveServer (inside of VSCode) and Node http-server for a local server
-5. Node (for JavaScript tools like http-server)
+4. LiveServer (inside of VSCode) as a local server ~~and Node http-server for a local server~~
+5. ~~Node (for JavaScript tools like http-server)~~
 6. Getting GitHub CoPilot for VSCode set up (see {{<link copilot_signup>}} and {{<link copilot_vscode>}})
 
 Some details follow.
@@ -105,7 +105,7 @@ Here are two options (there are certainly others):
 
 1. Use the ["http-server"](https://www.npmjs.com/package/http-server) that is part of Node. This requires that you have Node installed (see {{% anchorlink "Node and JavaScript Tools" %}} below). This has useful features like being able to turn off caching so file changes are seen instantly. You probably want to use `http-server -c-1`
 
-If you use Visual Studio Code, you will probably want to have Live Server (since it is very convenient), but you will also want to have a stand alone option for running programs outside of VSCode.
+If you use Visual Studio Code, you will probably want to have Live Server (since it is very convenient)~~, but you will also want to have a stand alone option for running programs outside of VSCode~~. Live Server is generall sufficient for class.
 
 Remember: using a local web server requires you to (1) have it installed correctly; (2) start the server running in the correct directory; and (3) pointing your web browser to the right place. Everyone's configuration is always slightly different, but (for example) when I use `http-server`, I need to (1) go to the directory I am working in with my `.html` files in a command window, (2) type `http-server -c-1` (I need the option to turn off caching), and go to "http://127.0.0.1:8080/index.html" in my web browser (`http-server` tells me this link when I run it).
 
@@ -113,15 +113,7 @@ If you're using VSCode with live server (recommended), don't forget to start the
 
 ## Node and JavaScript Tools
 
-Node is a JavaScript environment that runs outside of the web browser. We won't be using it for class. However, it is useful to have it installed since it is the main way to get other, useful JavaScript tools. Node has a package manager (called "npm") that gives a convenient way to install JavaScript related programs.
-
-Some things you probably want to have:
-
-1. http-server - See {{% anchorlink "Local Web Server" %}} above.
-
-1. In the past, we recommended using an error checker (like eslint). However, we do not recommend these for CS559 students this year. 
-
-If you use VSCode, you'll want to have Node installed since VSCode will use Node and npm to do some of its magic such as getting type inference information.
+You don't need Node for class. Everything you need is built into Visual Studio Code.
 
 ## Type Checkers and Linters
 
