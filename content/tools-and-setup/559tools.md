@@ -11,6 +11,18 @@ summary: 'An overview of recommended tools for doing the programming assignments
 
 **Preface:** For programming in this class, you will want to have good tools. Good tools make programming easier, and let you focus on the (more fun and interesting) content. You will also need to have tools to work with GIT for source control as this will be our mechanism for handing in assignments.
 
+<!--more-->
+
+## The Very Short Version
+
+For class, you should
+
+1. Make sure you have a GitHub account
+2. Set up you computer with an SSH key to access GitHub easily
+3. Install Visual Studio Code and its Live Server Extension
+
+There are alternatives for #2 and #3. But, for almost everybody, they are the right choice. Visual Studio Code has all the other tools you will need built in.
+
 ## Overview of Programming Tools for CS559
 
 In CS559, you will do a substantial amount of JavaScript programming. See the {{% link "javascript559" %}} page for a discussion. We will use GitHub to distribute framework code and for students to hand in assignments (see the {{% link "git559" %}} page).
