@@ -2,6 +2,10 @@
 title: "Zoom for CS559"
 date: 2026-01-14T09:46:33-06:00
 draft: false
+tags: ["tools"]
+categories: ["tools"]
+weight: 20
+summary: "Instructions on using Zoom video conferencing for class."
 ---
 
 ## Getting Started with Zoom
