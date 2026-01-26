@@ -40,7 +40,7 @@ To get started:
 ## Some Advice
 
 1. JavaScript support is now built in (if it isn't you can configure it)
-2. You will want to have Node and npm installed. It's probably better to install Node first (so VSCode can find it). Even if you don't use Node, VSCode will. 
+2. ~~You will want to have Node and npm installed. It's probably better to install Node first (so VSCode can find it). Even if you don't use Node, VSCode will.~~ Update: Node is no longer required. It doesn't hurt, but it isn't required.
 3. The "LiveServer" extension is very helpful - this will set up a local host server that will make it easier to try stuff out. LiveServer puts its service on port 5500 - the default VSCode debugging works on a different port (you may want to edit your "launch.json" file - which is automatically created by VSCode). Documentation is at [https://ritwickdey.github.io/vscode-live-server/](https://ritwickdey.github.io/vscode-live-server/)
 4. The debugger is built in to VSCode. You can run your program using live server and the debugger works (with a little bit of configuration - since LiveServer uses port 5500, and the debugger defaults to a different port). 
 5. The debugger defaults to always wanting to debug "index.html" (so if you have multiple html pages in one directory, this can be challenging).
