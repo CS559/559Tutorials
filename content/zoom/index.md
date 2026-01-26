@@ -17,6 +17,45 @@ Zoom is a video conferencing platform that we'll use for online class sessions a
 
 **Tip:** While you can use Zoom in a web browser, the desktop app provides the best experience with more features.
 
+## Signing In
+
+For class meetings you will need to be an authenticated Zoom user. This means that, when you log into Zoom, you need to sign in using SSO, and the SSO domain needs to be "uwmadison".
+
+### Zoom App
+
+Click on the SSO Login Button and it will open your browser to the school login page.
+
+![SSO Login Button](./SSOLoginButton.png)
+
+Login using your school credentials.
+
+After loging in, it should take you back to the Zoom App. If it does not, then check the app to see if you were logged in but not redirected back to the app. If the app still shows that you are not logged in, try logging into the browser-based zoom first before retrying to log into the zoom app.
+
+When you are logged in, the Zoom app should look something like the following.
+
+![Zoom App](./ZoomApp.png)
+
+### Browser-Based Zoom
+
+Click the "Sign In" button on zoom.us.
+
+![Browser Sign In Button](./BrowserSignInButton.png)
+
+Click on the "SSO" sign in option.
+
+![Browser SSO Button](./BrowserSSOButton.png)
+
+Type in "uwmadison" into the company domain. And hit "continue".
+
+![UW Madison Company Domain Box](./UWMadisonBox.png)
+
+This should take you to the University of Wisconsin-Madison login page.
+Login with your credentials.
+
+After you are done signing in, you should see a page that looks something like this.
+
+![Browser-Based Zoom](./BrowserZoom.png)
+
 ## Joining a Meeting
 
 There are multiple ways to join a meeting.
@@ -162,7 +201,6 @@ To use a virtual background:
 2. Select **Choose Virtual Background**
 3. Pick a preset background or upload your own
 4. For best results, use a plain wall behind you or enable background blur
-
 
 ## Keyboard Shortcuts
 
