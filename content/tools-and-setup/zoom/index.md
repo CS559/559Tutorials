@@ -1,7 +1,7 @@
 ---
-title: "Zoom"
+title: "Zoom for CS559"
 date: 2026-01-14T09:46:33-06:00
-draft: true
+draft: false
 ---
 
 ## Getting Started with Zoom
