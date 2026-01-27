@@ -29,7 +29,7 @@ If you don't know what some of these things mean, read the rest of this page.
 
 The basic idea is:
 
-1. We will provide a GitHub classroom link as part of a module introduction survey. Each student will access the link. When they do, a private GitHub repository containing the assignment "starter" will be created for them. Each student will get their own private repository. **Warning:** you need to accept the invitation to the repository.
+1. We will provide a GitHub classroom link as part of a module introduction survey. Each student will access the link. When they do, a private GitHub repository containing the assignment "starter" will be created for them. Each student will get their own private repository. **Warning:** you need to accept the invitation to the repository. *You will get an a Repository Access Issue.* Once you accept the invitation you can access your repository.
 2. Each student clones their repository to their computer as the starting point for their assignment.
 3. Each student works on their assignment, using their repository as they want. They commit different versions, create clones, push and pull, etc.
 4. When the student completes their assignment, they push to the classroom repository. The version they wish to have graded should be the "master" branch.
@@ -49,6 +49,10 @@ GitHub classroom provides a thin layer over regular GitHub to automate the creat
 For each assignment, GitHub Classroom will make a special URL link. When you go to this link, it will create a private repository for you. The repository will have the name "AssignmentName-GitHubID". This repository is a clone of the starter repository. The repository is a private repository owned by the course staff (so we can view it) that the student will have write access to it.
 
 **A warning:** GitHub will invite you to this new repository. This invitation is *separate* from GitHub classroom to create the repository. GitHub will send you email to accept the invitation to the repository. Or, you can look at your pending invitations (the mailbox icon in the upper right corner of the page on `github.com`) and accept through your notifications.
+
+{{<resource-image src="access-issue.png">}}
+
+After you create the repository, you will get a "Repository Access Issue". You will get this any time you try to access the repository before you accept your invitation to it. You must accept the invitation in order to access the repository.
 
 GitHub classroom creates repositories for any GitHub user ID that requests one. It does not necessarily associate anything with student ID or person. Students tell the course staff what their GitHub user ID is, and we keep a list to associate it with your University info.
 
