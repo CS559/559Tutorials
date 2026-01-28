@@ -27,8 +27,8 @@ Some ideas (please let us know if you have other suggestions):
 
 ## Regular Textbooks
 
-In the past we recommended these two resources. They are both available online via the UW library. Copies of the key chapters are also in Canvas (for your section) in the "Files/Books" folder.
+In the past we recommended these two resources. They are both available online via the UW library. 
 
-- *Practical Linear Algebra* by Farin and Hansford. [(UW Library Link - including to online)](https://search.library.wisc.edu/catalog/9910196145102121) This is a book that teaches the basics of linear algebra by motivating it with geometric (graphics) examples. **It is my top recommendation. We put copies of the key chapters in Canvas.**
+- *Practical Linear Algebra* by Farin and Hansford. [(UW Library Link - including to online)](https://search.library.wisc.edu/catalog/9910196145102121) This is a book that teaches the basics of linear algebra by motivating it with geometric (graphics) examples. **It is my top recommendation.**
 - Chapter 5: Linear Algebra in *Fundamentals of Computer Graphics.* This chapter is a random assortment of explanations of linear algebra topics that are useful (for graphics in general). It is surprisingly disconnected from the geometric intuitions and uses in graphics.
 - The Appendix to the Real Time Rendering book has a quick review of the parts of linear algebra useful for graphics. It is [online](https://www.realtimerendering.com/Real-Time_Rendering_4th-Appendices.pdf) (and left out of the book!). It's a good reminder of the equations and where they come from, but less good to learn it from in the first place. 
