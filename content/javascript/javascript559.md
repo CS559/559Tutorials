@@ -60,6 +60,7 @@ Basic rule: you should start with what we give you, and type everything yourself
 2. You must write JavaScript and CSS and HTML yourself directly.
 3. You should only use the libraries that we give you.
 4. You must give proper attribution to any code that you don't write yourself. This includes copying lines of code (or even retyping lines of code) from web forums.
+5. You may use any JavaScript language features that are built into the language or provided by the web browser. 
 
 {{< expand "More Details" >}}
 Basic rule: you should start with what we give you, and type everything yourself. What you give us must run in the web browser we use for testing. If you didn't type it, you shouldn't turn it in.
@@ -70,7 +71,7 @@ Your program must run as handed in (no compilation steps). You may not use a tra
 
 You may not add any new libraries that you did not write. You must use the library files that we provide. You should not change the libraries that we provide unless instructed to do so.
 
-You may use whatever features of JavaScript work in the web browser that the grader will use for testing (Google Chrome).
+You may use whatever features of JavaScript work in the web browser that the grader will use for testing (Google Chrome). You can use anything built into the language and web browser. This includes things like classes or promises. We generally encourage students to use simpler features, unless they are familiar with the fancier things (or are trying to become familiar with them). We may not be able to support students in using fancy language features.
 
 These same rules apply to HTML and CSS (e.g., you need to write all the HTML and CSS "by hand" - rather than using a pre-processor for a higher level language like [SASS](https://en.wikipedia.org/wiki/Sass_(stylesheet_language)) or [LESS](https://en.wikipedia.org/wiki/Less_(stylesheet_language))).
 
