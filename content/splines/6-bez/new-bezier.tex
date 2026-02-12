@@ -1,0 +1,112 @@
+\Bezier curves are one of the most common representations for free-form
+curves in computer graphics. The curves are named for Pierre \Bezier,
+one of the people who were instrumental in their development. \Bezier
+curves have an interesting history where they were concurrently
+developed by several independent groups.
+
+A \Bezier curve is a polynomial curve that approximates its control
+points. The curves can be any degree of polynomial. A curve of degree
+$d$ is controlled by $d+1$ control points. The curve interpolates its
+first and last control points, and the shape is directly influenced by
+the other points.
+
+Often, complex shapes are made by connecting a number of \Bezier curves
+of low degree. To avoid confusion, we refer to each polynomial piece
+as a segment. In computer graphics, cubic ($d=3$) \Bezier curves are
+the most commonly used for each segment. Many popular illustration
+programs, such as Adobe Illustrator, and font representation schemes,
+such as that used in Postscript, use cubic \Bezier segments.
+\Bezier curves are extremely popular in computer graphics because they
+are easy to control, have a number of useful properties, and there are
+very efficient algorithms for working with them.
+
+\Bezier curves are constructed such that:
+\begin{itemize}
+\item the curve interpolates the first and last control points,
+      with $u=0$ and $1$ respectively;
+\item the first derivative of the curve at its begining (end) is
+      determined by the vector between the first and second (next
+      to last and last) control points. The derivatives are given
+      by the vectors between these points scaled by the degree of
+      the curve;
+\item higher derivatives at the begining (end) of the curve depend
+         on the points at the begining (end) of the curve. The
+         $n^{th}$ derivative depends on the first (last) $n+1$ points.
+\end{itemize}
+
+\begin{figure}
+\centerline{\includegraphics{Figs/new-bezier-cubic.pdf}}
+\caption{\label{fig:cubic-bezier}
+	A cubic \Bezier segment is controlled by four points.
+	It interpolates the first and last, and the begining and final
+	derivatives are 1/3 of the vectors between the first two (or
+	last two) points.
+	}
+\end{figure}
+
+
+For example, consider the \Bezier curve of degree 3 as in
+Figure~\ref{fig:cubic-bezier}. The curve has four ($d+1$) control
+points. It begins at the first control point ($\mathbf{p_0}$) and ends
+at the last ($\mathbf{p_1}$). The first derivative at the begining is
+proportional to the vector between the first and second control points
+$(\mathbf{p_1}-\mathbf{p_0})$. Specifically,
+$\mathbf{f'}(0)=3(\mathbf{p_1}-\mathbf{p_0})$. Similarly, the first
+derivative at the end of the curve is given by
+$\mathbf{f'}(1)=3(\mathbf{p_3}-\mathbf{p_2})$. The second derivative
+at the begining of the curve can be determined from control points
+$\mathbf{p_0}$, $\mathbf{p_1}$ and $\mathbf{p_2}$.
+
+Using the facts about Bezier cubics in the preceeding paragraph, we
+can use the methods of Section \ref{sec:cubics} to create a parametric
+function for them. The definitions of the begining and end
+interpolation and derivatives give:
+\[
+\begin{array}{rcl}
+	 \mathbf{p_0} = & \mathbf{f}(0) &
+		=   \mathbf{a_3} 0^3 + \mathbf{a_2} 0^2 + \mathbf{a_1} 0 + \mathbf{a_0}\\
+	 \mathbf{p_3} = & \mathbf{f}(1)&
+		=   \mathbf{a_3} 1^3 + \mathbf{a_2} 1^2 + \mathbf{a_1} u + \mathbf{a_0} \\
+	 3(\mathbf{p_1}-\mathbf{p_0}) = & \mathbf{f'}(0) &
+		= 3 \mathbf{a_3} 0^2 + 2 \mathbf{a_2} 0 + \mathbf{a_1}     \\
+	 3(\mathbf{p_3}-\mathbf{p_2}) =&  \mathbf{f'}(1) &
+		= 3 \mathbf{a_3} 1^2 + 2 \mathbf{a_2} 1 + \mathbf{a_1}.
+\end{array}
+\]
+This can be solved for the basis matrix
+\[
+	\mathbf{B} = \mathbf{C}^{-1} =
+	\left[\begin{array}{rrrr}
+	 1&  0&  0& 0\\
+	-3&  3&  0& 0\\
+	 3& -6&  3& 0\\
+	-1&  3& -3& 1\\
+	\end{array}\right],
+\]
+   and then written as
+\[
+       \mathbf{f}(u) = (1-3u+3u^2-u^3) \mathbf{p_0}
+		     + (3u-6u^2+3u^3) \mathbf{p_1}
+		     + (3u^2-3u^3) \mathbf{p_2}
+		     + (u^3) \mathbf{p_3},
+\]
+   or
+\[
+       \mathbf{f}(u) = \displaystyle\sum_{i=0}^{d} b_{i,3}\mathbf{p_i}
+\]
+where the $b_{i,3}$ are the \Bezier blending functions of degree 3:
+\[
+	\begin{array}{rl}
+       b_{0,3} = & (1-u)^3 \\
+       b_{1,3} = & 3u(1-u)^2\\
+       b_{2,3} = & 3u^2(1-u)\\
+       b_{3,3} = & u^3.
+	\end{array}
+\]
+
+Fortunately, the blending functions for Bezier curves have a special
+form that works for all degrees. These functions are known as the
+{\em Bernstein Basis Polynomials} and have the general form
+\[
+b_{k,n}(u)\ =\ C(n,k)\ u^k\ (1-u)^{(n-k)},
+\]

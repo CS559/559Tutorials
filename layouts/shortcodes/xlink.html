@@ -1,0 +1,13 @@
+{{/* xlink - link to a numbered page - uses the page number but generates a nicer name for the link (with the page number) */}}
+{{- $text := .Get 1 -}}
+{{- with .Site.GetPage (.Get 0) -}}
+<a href="{{ .RelPermalink }}">
+    {{- with $text -}}
+        {{- . -}}
+    {{- else -}}
+        Page &nbsp; {{- .Page.Params.page -}} &nbsp; ({{- .Page.Title -}})
+    {{- end -}}
+</a>
+{{- else -}}
+{{ errorf "%s: bad xlink %s (on %s)" .Position (.Get 0) .Page.File }}
+{{- end -}}

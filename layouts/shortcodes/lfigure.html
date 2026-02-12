@@ -1,0 +1,46 @@
+{{- /* 1. Increment Figure Counter */ -}}
+{{- $count := .Page.Scratch.Get "fig_counter" | default 0 -}}
+{{- $count = add $count 1 -}}
+{{- .Page.Scratch.Set "fig_counter" $count -}}
+
+{{- /* 2. Register ID for Referencing */ -}}
+{{- $id := .Get "label" | default (.Get "id") -}}
+{{- if $id -}}
+  {{- .Page.Scratch.SetInMap "fig_refs" $id $count -}}
+{{- end -}}
+
+{{- /* 3. Resolve the Image Resource */ -}}
+{{- $src := .Get "src" -}}
+{{- $img := "" -}}
+
+{{- /* Check Local (Page Bundle) then Global (Assets) */ -}}
+{{- $img = .Page.Resources.GetMatch $src -}}
+{{- if not $img -}}
+  {{- $img = resources.Get $src -}}
+{{- end -}}
+
+{{- /* 4. Render */ -}}
+<figure {{ with $id }}id="{{ . }}"{{ end }} class="{{ .Get "class" }}">
+    {{- if $img -}}
+        <img src="{{ $img.RelPermalink }}" 
+             alt="{{ .Get "alt" | default "Figure" }}" 
+             {{- /* Logic: Use manual width if provided. 
+                    If not, ONLY use auto-dimensions for non-SVGs. */ -}}
+             {{- if .Get "width" -}}
+                 style="width: {{ .Get "width" }}; height: auto;"
+             {{- else if ne $img.MediaType.SubType "svg" -}}
+                 width="{{ $img.Width }}" 
+                 height="{{ $img.Height }}"
+             {{- end -}}
+        />
+    {{- else -}}
+        <div style="border: 2px dashed red; padding: 10px; color: red;">
+            <strong>Error:</strong> Image not found: <code>{{ $src }}</code>
+        </div>
+    {{- end -}}
+
+    <figcaption>
+        <h4>Figure {{ $count }}:</h4> 
+        {{ .Get "caption" | markdownify }}
+    </figcaption>
+</figure>

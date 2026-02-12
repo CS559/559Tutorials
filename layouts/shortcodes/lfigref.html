@@ -1,0 +1,9 @@
+{{- $id := .Get 0 -}}
+{{- $refs := .Page.Scratch.Get "fig_refs" -}}
+{{- $num := index $refs $id -}}
+
+{{- if $num -}}
+<a href="#{{ $id }}" class="fig-ref">Figure {{ $num }}</a>
+{{- else -}}
+<a href="#{{ $id }}" class="fig-ref">Figure (See below)</a>
+{{- end -}}
