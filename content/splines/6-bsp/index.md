@@ -252,7 +252,7 @@ the four control points that influence it:
 {{< displaymath >}}
 \mathbf{f}(u) =
 	\frac{1}{6} (-u^3 + 3u^2 -3u +1) \mathbf{p_i} +
-	\frac{1}{6} (3u^3+6u^2+4) \mathbf{p_{i+1}} +
+	\frac{1}{6} (3u^3-6u^2+4) \mathbf{p_{i+1}} +
 	\frac{1}{6} (-3u^3+3u^2+3u+1) \mathbf{p_{i+2}} +
 	\frac{1}{6} u^3 \mathbf{p_{i+3}}.
 {{< /displaymath >}}
