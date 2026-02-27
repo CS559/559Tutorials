@@ -235,7 +235,7 @@ b_{i,4}(t) = \begin{array}{lll}
 	\frac{1}{6} u^3 & \mathrm{if\ } i \leq t < i+1 & u=t-i\\
 	\frac{1}{6} (-3u^3+3u^2+3u+1)
 				& \mathrm{if\ } i+1 \leq t < i+2 & u=t-(i+1)\\
-	\frac{1}{6} (3u^3+6u^2+4)
+	\frac{1}{6} (3u^3-6u^2+4)
 				& \mathrm{if\ } i+2 \leq t < i+3 & u=t-(i+2)\\
 	\frac{1}{6} (-u^3 + 3u^2 -3u +1)
 				& \mathrm{if\ } i+3 \leq t < i+4 & u=t-(i+3)\\
@@ -244,7 +244,7 @@ b_{i,4}(t) = \begin{array}{lll}
 {{< /displaymath >}}
 This degree 3 B-Spline is graphed for {{< math "i=1" >}} in Figure {{< lfigref "fig:cubic-bspline" >}}.
 
-{{< lfigure src="Figs/b3basis.svg" caption="The cubic (k=4) B-Spline with uniform knots. WARNING: THE FIGURE IN THE DOCUMENT ALICE SENT ME IS CORRUPTED." label="fig:cubic-bspline" >}}
+{{< lfigure src="Figs/b3basis.svg" caption="The cubic (k=4) B-Spline with uniform knots." label="fig:cubic-bspline" >}}
 
 We can write the function for the overall curve between knots {{< math "i+3" >}}
 and {{< math "i+4" >}} as a function of the parameter {{< math "u" >}} between {{< math "0" >}} and {{< math "1" >}} and
