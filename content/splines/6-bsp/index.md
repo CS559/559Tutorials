@@ -150,9 +150,8 @@ number of coefficients or control points.
 - The overall spline has {{< math "n+k" >}} knots.
 - Each B-Spline is {{< math "C(k-2)" >}} continuous, therefore the overall
 	spline is {{< math "C(k-2)" >}} continuous.
-- The set of B-Splines sums to 1 for all parameter values between
-	knots {{< math "d" >}} and {{< math "n+1." >}} This range is where there are {{< math "d" >}} B-Splines
-	that are non-zero. Summing to 1 is important because it means
+- The set of B-Splines sums to 1 for all parameter values where there are {{< math "k" >}} B-Splines active (non-zero).
+	Summing to 1 is important because it means
 	that the B-Splines are shift invariant: translating the control
 	points will translate the entire curve.
 - Between each of its knots, the B-Spline is a single, degree {{< math "d=k-1" >}}
@@ -208,7 +207,7 @@ depends on {{< math "k" >}} coefficients. For the {{< math "k=3" >}} case, we ca
 	\frac{1}{2} u^2 \mathbf{p_{i+2}}
 {{< /displaymath >}}
 where {{< math "u =t-i." >}} This defines the piece of the overall function when
-{{< math "i \leq t < i+1." >}}
+{{< math "i \leq t < i+1." >}} *Warning: the order reverses because of how the points are ordered. Simplify this in the future.*
 
 If we have a set of {{< math "n" >}} points, we can use the B-Splines to create a
 curve. If we have 7 points, we will need a set of 7 B-Splines. A set
@@ -218,7 +217,7 @@ that the sum of the B-Splines is 1 over the range {{< math "k" >}} to {{< math "
 3 through 8). A curve specified using these B-Splines and a set of
 points is shown in Figure {{< lfigref "fig:quad-bsp-curve" >}}.
 
-{{< lfigure src="Figs/quad-bsp.svg" caption="The set of 7 B-Splines with k=3 and uniform knot spacing [1,2,3,4,5,6,7,8,10]." label="fig:quad-bsplines" >}}
+{{< lfigure src="Figs/quad-bsp.svg" caption="The set of 7 B-Splines with k=3 and uniform knot spacing [1,2,3,4,5,6,7,8,9,10]." label="fig:quad-bsplines" >}}
 
 {{< lfigure src="Figs/15-20-quad-bsp-7pts.svg" caption="Curve made from 7 quadratic (k=3) B-Splines, using 7 control points." label="fig:quad-bsp-curve" >}}
 

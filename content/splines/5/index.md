@@ -213,11 +213,11 @@ f'(1) = & \frac{1}{2}(1-t)(\mathbf{p_4} - \mathbf{p_2})
 Solving these for the control points (defining {{< math "s=(1-t)/2" >}}) gives:
 {{< displaymath >}}
 \begin{array}{rll}
-\mathbf{p_0} = & f(1) - \frac{2}{1-t}f'(0) & =
+\mathbf{p_1} = & f(1) - \frac{2}{1-t}f'(0) & =
 		a_0 + (1-\frac{1}{s}) a_1 + a_2 + a3 \\
-\mathbf{p_1} = & f(0) & = a_0 \\
-\mathbf{p_2} = & f(1) & = a_0 + a_1 + a_2 + a3 \\
-\mathbf{p_3} = & f(0) + \frac{1}{s}f'(1) & =
+\mathbf{p_2} = & f(0) & = a_0 \\
+\mathbf{p_3} = & f(1) & = a_0 + a_1 + a_2 + a3 \\
+\mathbf{p_4} = & f(0) + \frac{1}{s}f'(1) & =
 		a_0 + \frac{1}{s} a_1 + 2 \frac{1}{s} a_2 + 3
 		\frac{1}{s} a3 \\
 \end{array}

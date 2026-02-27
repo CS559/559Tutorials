@@ -16,6 +16,10 @@ developed by several independent groups.
 <!--more-->
 {{<not-book>}}
 
+{{%dimbox%}}
+**Warning:** the original notes were written using a mix of "degree" and "order" for the notation (*d* and *n*). This was confusing. The book more consistently uses order, while I think degree is clearer. I have tried to use *d* more consistently, but there are places where order sneaks in.
+{{%/dimbox%}}
+
 A Bezier curve is a polynomial curve that approximates its control
 points. The curves can be any degree of polynomial. A curve of degree
 {{< math "d" >}} is controlled by {{< math "d+1" >}} control points. The curve
@@ -68,7 +72,7 @@ interpolation and derivatives give:
 		 \mathbf{p_0} = & \mathbf{f}(0) &
 				=   \mathbf{a_3} 0^3 + \mathbf{a_2} 0^2 + \mathbf{a_1} 0 + \mathbf{a_0}\\
 		 \mathbf{p_3} = & \mathbf{f}(1)&
-				=   \mathbf{a_3} 1^3 + \mathbf{a_2} 1^2 + \mathbf{a_1} u + \mathbf{a_0} \\
+				=   \mathbf{a_3} 1^3 + \mathbf{a_2} 1^2 + \mathbf{a_1} 1 + \mathbf{a_0} \\
 		 3(\mathbf{p_1}-\mathbf{p_0}) = & \mathbf{f'}(0) &
 				= 3 \mathbf{a_3} 0^2 + 2 \mathbf{a_2} 0 + \mathbf{a_1}     \\
 		 3(\mathbf{p_3}-\mathbf{p_2}) =&  \mathbf{f'}(1) &
@@ -110,20 +114,20 @@ Fortunately, the blending functions for Bezier curves have a special
 form that works for all degrees. These functions are known as the
 *Bernstein Basis Polynomials* and have the general form
 {{< displaymath >}}
-b_{k,n}(u) = C(n,k)\ u^k\ (1-u)^{(n-k)},
+b_{k,d}(u) = C(d,k)\ u^k\ (1-u)^{(d-k)},
 {{< /displaymath >}}
-where {{< math "n" >}} is the degree of the Bezier curve, and {{< math "k" >}} is the blending
-function number between 0 and {{< math "d" >}} (inclusive). {{< math "C(n,k)" >}} is the
+where {{< math "d" >}} is the degree of the Bezier curve, and {{< math "k" >}} is the blending
+function number between 0 and {{< math "d" >}} (inclusive). {{< math "C(d,k)" >}} is the
 binomial coefficients
 {{< displaymath >}}
-C(n,k) = \frac{n!}{k!\ (n-k)!}.
+C(d,k) = \frac{n!}{k!\ (d-k)!}.
 {{< /displaymath >}}
 
 Given the positions of the control points {{< math "\mathbf{p_i}," >}} the
 function to evaluate the Bezier curve of degree {{< math "d" >}} (with {{< math "d+1" >}}
 control points) is:
 {{< displaymath >}}
-\mathbf{p}(u)\ =\ \displaystyle\sum_{k=0}^d \mathbf{p_k} C(n,k)\ u^k\ (1-u)^{(n-k)}.
+\mathbf{p}(u)\ =\ \displaystyle\sum_{k=0}^d \mathbf{p_k} C(d,k)\ u^k\ (1-u)^{(d-k)}.
 {{< /displaymath >}}
 
 Some Bezier segments are shown in Figure {{< lfigref "fig:bez-segs" >}}.

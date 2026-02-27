@@ -60,7 +60,7 @@ the condition that the curve pieces fit together *continuity*
 conditions because if they hold, the curve can be drawn as a
 continuous piece. Technically, a "broken curve" is not a curve
 as our definition of a curve at the beginning of the chapter
-requiems curves to be continuous.
+requires curves to be continuous.
 
 In addition to the positions, we can also check that the derivatives
 of the pieces match correctly. If {{< math "\mathbf{f_1}'(1) \neq\mathbf{f_2}'(0)" >}}, then the combined curve will have an abrupt change

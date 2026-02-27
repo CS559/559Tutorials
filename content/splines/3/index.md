@@ -162,7 +162,7 @@ We can solve these equations for {{< math "\mathbf{a_0}" >}} and
 <a id="sec:matrix"></a>
 #### Matrix Form for Polynomials
 
-While this first example was easy easy enough to solve, for more
+While this first example was easy enough to solve, for more
 complicated examples it will be easier to write
 Equation {{< eqref "eqn:line-example1" >}} in the form:
 {{< displaymath >}}

@@ -50,7 +50,7 @@ The problem that we need to address is how to specify a curve - to
 give "names" or representations to all curves so that we can
 represent them on a computer. For some curves, the problem of naming
 them is easy since they have known shapes: line segments, circles,
-elliptical arcs, etc. A general curve that doesn't not have a
+elliptical arcs, etc. A general curve that does not have a
 "named" shape is sometimes called a *free-form* curve.
 
 Because a free-form curve can take on just about any shape, they are
