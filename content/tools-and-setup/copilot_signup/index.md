@@ -80,4 +80,4 @@ Otherwise, once activated, your "GitHub Copilot" section should look something l
 
 {{<resource-image src="github_you_have_copilot_pro.jpg" size="600x600">}}
 
-Our next tutorial is on how to ({{<lnk copilot_vscode "integrate GitHub Copilot with VS Code">}}). The instructions work regardless of whether you are using Copilot Pro or Copilot Free.
+Our next tutorial is on how to ({{< link page="copilot_vscode" text="integrate GitHub Copilot with VS Code" >}}). The instructions work regardless of whether you are using Copilot Pro or Copilot Free.

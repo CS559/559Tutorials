@@ -3,8 +3,8 @@
 locale = "en-us"
 title = "CS559 Computer Graphics Tutorials"
 # note that we are skipping "sp22" theme - we'll try to put it right in the site
-# we switched from mainroad to roadster in 2025
-theme = ["559Theme","roadster"]
+# roadster was absorbed into 559Theme in the v1-unification bump
+theme = ["559Theme"]
 
 # this is archaic - and deprecated in Fall of 2024
 # this seems to make things more robust to different deployments
@@ -36,17 +36,19 @@ subtitle = "Tutorial Resources for CS559"
 # archivenote = "This web page is from the Spring 2023 CS559 (Computer Graphics) class."
 ImportantPages = ["allpages"]
 pagination.pagerSize = 15
-themestyle = "new"
 recentSections = ["posts","assigns", "weeks-in-vis","gallery"]
 
 fixme = false
+
+[Params.style]
+preset = "uw-serif"
 
 [Params.sidebar]
 home = "right"
 list = "right"
 single = "right"
 # remove "thisweek" - since it is irrelevant for CS559
-widgets = ["section","lunr","important","links","sections","taglist"]
+widgets = ["section","search","important","links","sections","taglist"]
 
 [outputs]
 home = [ "HTML", "RSS", "JSON" ]

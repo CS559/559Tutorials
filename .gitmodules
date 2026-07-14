@@ -4,9 +4,6 @@
 [submodule "static/559-Lib"]
 	path = static/559-Lib
 	url = git@github.com:CS559/CS559-Lib.git
-[submodule "themes/roadster"]
-	path = themes/roadster
-	url = git@github.com:mansoorbarri/roadster.git
 [submodule "static/libs/CS559-Three"]
 	path = static/libs/CS559-Three
 	url = git@github.com:CS559/CS559-Three25.git

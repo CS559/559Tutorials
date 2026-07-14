@@ -18,7 +18,7 @@ The material on this page is covered in depth by the ["Mozilla (official) Adding
 
 SVG is two thing things that are tightly inter-related:
 
-1. SVG is a file format for 2D vector (or object-oriented) graphics. (see the {{% link "images-vs-objects" tutorial %}}). It is widely used. Web browsers can use SVG files natively.
+1. SVG is a file format for 2D vector (or object-oriented) graphics. (see the {{% link page="images-vs-objects" anchor="tutorial" %}}). It is widely used. Web browsers can use SVG files natively.
 
 2. SVG is an "API" for doing 2D vector graphics in the web browser. Technically, it is not its own API: it uses standard browser mechanisms for representation and programming. The graphical objects in SVG are manipulated as any other elements in the web browser.
 

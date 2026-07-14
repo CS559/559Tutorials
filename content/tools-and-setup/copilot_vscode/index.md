@@ -14,7 +14,7 @@ Instructions on how to setup GitHub Copilot so that it gives suggestions in VS C
 
 # Setting up Copilot to Work with VS Code
 
-Note that if you do not have GitHub Copilot yet, you should follow the steps of our ({{<lnk copilot_signup "instructions on setting up GitHub Copilot">}}) before following these instructions. For these instructions, it does ***not*** matter whether you have Copilot Free or Copilot Pro -- the process is the same. The only difference is that, once you get Copilot to give you suggestions and chat with you, you may run into a message/suggestion limit if you are using Copilot Free. If you later upgrade from Copilot Free to Copilot Pro on GitHub, VS Code should automatically remove this limit (you may have to close all of VS Code's windows and open them again to make it recognize the upgrade).
+Note that if you do not have GitHub Copilot yet, you should follow the steps of our ({{< link page="copilot_signup" text="instructions on setting up GitHub Copilot" >}}) before following these instructions. For these instructions, it does ***not*** matter whether you have Copilot Free or Copilot Pro -- the process is the same. The only difference is that, once you get Copilot to give you suggestions and chat with you, you may run into a message/suggestion limit if you are using Copilot Free. If you later upgrade from Copilot Free to Copilot Pro on GitHub, VS Code should automatically remove this limit (you may have to close all of VS Code's windows and open them again to make it recognize the upgrade).
 
 ## Install VS Code
 
