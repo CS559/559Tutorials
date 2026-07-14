@@ -4,7 +4,7 @@ date: 2023-01-16T16:36:27-06:00
 draft: false
 weight: 1
 categories: ["JavaScript"]
-tags: [javascript]
+tags: [JavaScript]
 ---
 
 I used to give a "JavaScript tip of the day" at the beginning of every lecture. Students preferred that the lectures focused on course material. So I turned it into a single (long) video lecture...
