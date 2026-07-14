@@ -15,6 +15,7 @@ They are organized by topic:
 + Math for CS559 - {{<link "math">}} - some mathematical hints
 + SVG for CS559 - {{<link "svg">}} - a basic introduction to SVG for when you need to use it
 + Curves - {{<link "curves">}} - some demonstrations and explanations of various aspects of curves
++ Curves (Splines) Tutorial - {{<link "splines">}} - a recreation of my old book chapter on curves focusing on polynomial splines
 + Types of Pictures in Graphics - {{<link "types-of-pictures">}} - the foundations of graphics: what is a pixel anyway?
 
 Some 3D Oriented Demos and Tutorials
