@@ -7,7 +7,8 @@
       "Bash(conda run *)",
       "Bash(./tools/compare.sh pre-bump *)",
       "Read(//tmp/claude-501/-Users-gleicher-Projects-559Tutorials/338f9287-8230-4644-856b-4321d066cfd4/scratchpad/**)",
-      "Bash(git checkout *)"
+      "Bash(git checkout *)",
+      "Bash(rm -rf public)"
     ]
   }
 }
