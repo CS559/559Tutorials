@@ -1,6 +1,6 @@
 # this was coipied over from CS559-22 
 
-languageCode = "en-us"
+locale = "en-us"
 title = "CS559 Computer Graphics Tutorials"
 # note that we are skipping "sp22" theme - we'll try to put it right in the site
 # we switched from mainroad to roadster in 2025
@@ -50,6 +50,9 @@ widgets = ["section","lunr","important","links","sections","taglist"]
 
 [outputs]
 home = [ "HTML", "RSS", "JSON" ]
+
+[security]
+  allowContent = ["^text/markdown$", "^text/html$"]
 
 [markup.goldmark.renderer]
 unsafe= true
