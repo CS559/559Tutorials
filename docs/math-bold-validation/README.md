@@ -1,13 +1,26 @@
 # Math-bold-in-Chromium: validation on this site's real content
 
-**Status: confirmed present, not fixed here.** This is the validation
-write-up for a known, deferred 559Theme issue — full investigation,
-root-cause analysis, and the recommended fix live in the theme itself at
+**Status: bug confirmed here (2026-07-13); fix built in the theme and
+re-validated here (2026-07-14).** Full investigation, root-cause analysis,
+the recommended fix, and its implementation live in the theme at
 [`themes/559Theme/docs/math-bold-research/README.md`](../../themes/559Theme/docs/math-bold-research/README.md).
 This document does not repeat that analysis. It records that the bug
-reproduces on this site's actual math content (not just the theme's
-synthetic test rigs), how that was confirmed, and where to find good
-examples for a future fix-it session.
+reproduced on this site's actual math content (not just the theme's
+synthetic test rigs), how that was confirmed, and — now — that the fix was
+re-validated against the same content.
+
+> **Fix re-validated on this site (2026-07-14).** With the theme's
+> mathvariant transform applied, equation (2) on `content/splines/1/` renders
+> genuinely bold: in Chromium the substituted Unicode glyphs carry ~30–40 %
+> more ink than plain (the old `mathvariant="bold"` measured identical to
+> plain — the bug); in Firefox the new form is pixel-identical to the form
+> Firefox already bolded (no regression, no double-bold). Side-by-side evidence
+> (rows: A plain / B old `mathvariant` / C new Unicode fix):
+> [Chromium](img/after-fix-eq2-compare-chromium.png) — B is identical to A (the
+> bug), C is bold; [Firefox](img/after-fix-eq2-compare-firefox.png) — B and C
+> both bold and identical.
+> Deployment note: the fix ships when this site's `themes/559Theme` submodule
+> is bumped to the theme commit carrying it.
 
 ## The problem, in one paragraph
 
@@ -92,21 +105,32 @@ the theme doc).
 
 ## Tooling note for whoever picks this up
 
-Playwright's `browser_take_screenshot` (both full-page and per-element)
-reliably hit a 5-second timeout at "waiting for fonts to load" / "waiting
-for element to be stable" in this sandbox, seemingly regardless of server
-state — retried after a dev-server restart with the same result. Likely an
-outbound font-fetch (Google Fonts) that can't complete without network
-access, blocking Playwright's internal font-ready wait. Two working
-alternatives used here:
+Playwright's `browser_take_screenshot` reliably hit a 5-second tool timeout —
+originally guessed to be a blocked Google-Fonts fetch, but **that was wrong**.
+The real cause (found 2026-07-14): this Playwright MCP is configured with
+`--cdp-endpoint http://localhost:9222`, i.e. it **attaches to the user's real,
+running Google Chrome** rather than a private headless browser — and several
+stale `playwright-mcp` instances from earlier sessions were all attached to that
+same Chrome at once. Multiple controllers contending for one browser makes the
+screenshot's "wait for stable / fonts ready" step hang past the 5 s cap (note the
+log even prints "fonts loaded" *before* timing out — so fonts aren't the
+blocker). `browser_evaluate` (DOM/canvas measurement) still works because it's a
+quick one-shot call.
 
-- DOM measurement via `browser_evaluate` (computed style + bounding-rect
-  width) — no screenshot needed, and arguably more precise anyway.
-- Headless Firefox's own `--screenshot` flag, run as a separate process
-  (not through the Playwright MCP tool), which doesn't hit the same
-  internal wait.
+What actually works for screenshots — **launch a browser directly, with its own
+profile, bypassing the MCP** (no contention, no shared state):
 
-If a future session needs a Chromium *screenshot* specifically (not just
-measurements), it may be worth pre-caching/self-hosting the Google Fonts
-request the page makes, or testing in an environment with outbound network
-access, before assuming the timeout is unfixable.
+- **Headless Chrome:** `"/Applications/Google Chrome.app/Contents/MacOS/Google
+  Chrome" --headless=new --disable-gpu --user-data-dir=/tmp/chrome-x
+  --window-size=W,H --virtual-time-budget=4000 --screenshot=out.png URL`
+  (the separate `--user-data-dir` is what lets it run alongside the user's Chrome).
+- **Headless Firefox:** `firefox --headless --new-instance --profile /tmp/ff-x
+  --screenshot out.png URL`.
+- **DOM/canvas measurement** via `browser_evaluate` (computed style, bounding
+  rect, or a canvas *ink-pixel count* — the right metric for boldness, since
+  advance width is confounded by italic vs upright shapes).
+
+The after-fix screenshots in `img/` were captured with the headless-Chrome and
+headless-Firefox commands above. If the MCP screenshot is ever needed, first kill
+the stale `playwright-mcp --cdp-endpoint ...:9222` processes so only one
+controller drives the shared Chrome.
