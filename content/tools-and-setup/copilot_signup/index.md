@@ -40,11 +40,11 @@ First, you should apply to GitHub Education as a student. Doing this will cause 
 
 Go to the "Access free GitHub Education benefits" page found at https://education.github.com/discount_requests/application (you may need to log into your GitHub account in order to view the page). Make sure that you are logged into the correct GitHub account (i.e. whatever GitHub account you want to apply your Copilot Pro to). If you are unsure if you are logged into the correct account, click on the top-right profile icon (shown by a red box in the image below) and click "Sign out of GitHub Education" before signing back in with the correct GitHub account.
 
-{{<resource-image src="access_free_github_education_benefits.jpg" size="600x600">}}
+{{< rimage src="access_free_github_education_benefits.jpg" width="600" >}}
 
 You should make sure that "Student" is selected as shown above and then scroll down to near the bottom of the page. You should see a section marked "Application" and you should fill in "University of Wisconsin-Madison" as shown below.
 
-{{<resource-image src="github_education_application.jpg" size="600x600">}}
+{{< rimage src="github_education_application.jpg" width="600" >}}
 
 Then, click "Continue" and go to the next page (share your location with Microsoft if requested). If you have already verified your account or already requested verification then the "Continue" button will be greyed out and unclickable.
 
@@ -54,30 +54,30 @@ If you are not currently in Madison, then you may have a second question on your
 
 Then submit your application and await approval. Approval typically takes 2 hours to 4 days but you can use the free version of Copilot in the meantime. To check whether you have been approved, you can go back to https://education.github.com/discount_requests/application?type=student (below, zoomed out) and check the area outlined in red below. It will show a request when you have requested GitHub Education benefits and will show "Approved" as shown below when you have been approved for them. "Approved" will be green when your request is approved and purple when your benefits are available.
 
-{{<resource-image src="approval_request_note.jpg" size="600x600">}}
+{{< rimage src="approval_request_note.jpg" width="600" >}}
 
 Once you have been approved for GitHub for Education, you will have to wait anywhere from another few hours to another few days for the approval to go into affect (i.e. for your benefits to become available). You will ***not*** be able to switch to Copilot Pro until the changes have gone into effect.
 
 Once the changes have gone into effect, you can go to https://education.github.com/learner/learn and enable GitHub Pro by clicking on the "Learn More" option shown below with a red box around it below.
 
-{{<resource-image src="copilot_learn_more.jpg" size="600x600">}}
+{{< rimage src="copilot_learn_more.jpg" width="600" >}}
 
 Then click the "Get access to GitHub Copilot" button.
 
-{{<resource-image src="copilot_get_access.jpg" size="600x600">}}
+{{< rimage src="copilot_get_access.jpg" width="600" >}}
 
 Click the "Save and Complete setup" button.
 
-{{<resource-image src="copilot_save_and_complete_setup.jpg" size="600x600">}}
+{{< rimage src="copilot_save_and_complete_setup.jpg" width="600" >}}
 
 Once you make the change, you may need to refresh VS Code (by closing all its windows and reopening them) before VS Code will use the new Copilot plan.
 
 To check whether you are currently using Copilot Free or Copilot Pro for your GitHub account, go to https://github.com/settings/copilot (this will require you to sign into a GitHub account if you are not signed into one already). If you do ***not*** have access to Copilot Pro yet, your page will look something like the following.
 
-{{<resource-image src="github_copilot_start_free_trial.jpg" size="600x600">}}
+{{< rimage src="github_copilot_start_free_trial.jpg" width="600" >}}
 
 Otherwise, once activated, your "GitHub Copilot" section should look something like the following image.
 
-{{<resource-image src="github_you_have_copilot_pro.jpg" size="600x600">}}
+{{< rimage src="github_you_have_copilot_pro.jpg" width="600" >}}
 
 Our next tutorial is on how to ({{< link page="copilot_vscode" text="integrate GitHub Copilot with VS Code" >}}). The instructions work regardless of whether you are using Copilot Pro or Copilot Free.

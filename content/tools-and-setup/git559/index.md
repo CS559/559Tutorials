@@ -50,7 +50,7 @@ For each assignment, GitHub Classroom will make a special URL link. When you go 
 
 **A warning:** GitHub will invite you to this new repository. This invitation is *separate* from GitHub classroom to create the repository. GitHub will send you email to accept the invitation to the repository. Or, you can look at your pending invitations (the mailbox icon in the upper right corner of the page on `github.com`) and accept through your notifications.
 
-{{<resource-image src="access-issue.png">}}
+{{< rimage src="access-issue.png" >}}
 
 After you create the repository, you will get a "Repository Access Issue". You will get this any time you try to access the repository before you accept your invitation to it. You must accept the invitation in order to access the repository.
 
